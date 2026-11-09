@@ -1,22 +1,16 @@
-"""
-URL configuration for backend_web project.
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/6.1/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
 from django.contrib import admin
-from django.urls import path
-
-urlpatterns = [
-    path('admin/', admin.site.urls),
-]
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from learning import views
+router=DefaultRouter()
+router.register('materials',views.MaterialViewSet,basename='materials')
+router.register('sessions',views.SessionViewSet,basename='sessions')
+router.register('training',views.TrainingViewSet,basename='training')
+urlpatterns=[path('admin/',admin.site.urls),path('api/v1/',include(router.urls))]
+urlpatterns += [path('api/v1/'+url,fn) for url,fn in [
+    ('health/',views.health),('auth/register/',views.register),('auth/login/',views.login),('auth/logout/',views.logout),
+    ('auth/me/',views.me),('users/',views.users),('edges/',views.edges),('quizzes/',views.quizzes),('gaps/',views.gaps),('attempts/',views.attempts),
+    ('statistics/',views.statistics),('stories/',views.stories),('reports/',views.reports),
+    ('learning-data/',views.clear_learning),('configuration/',views.configuration),
+]]
+urlpatterns += [path('api/v1/quizzes/<uuid:pk>/',views.quiz_detail),path('api/v1/quizzes/<uuid:pk>/submit/',views.submit_quiz)]

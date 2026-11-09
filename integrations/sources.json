@@ -1,0 +1,4 @@
+[
+  {"name":"hybrid_graph_rag","url":"https://github.com/tuanduy35399/hybrid_graph_rag.git","revision":"97e35e9370465293d07c0b85273fbe06c928340c","used":["hybridRAG_paper/indexing/embedding/bge_m3.py","hybridRAG_paper/indexing/vector/chroma.py","hybridRAG_paper/retrieval/search/hybrid_search.py"]},
+  {"name":"ai_agent_game_maker_plan","url":"https://github.com/tuanduy35399/ai_agent_game_maker_plan.git","revision":"c25184e37fc661e04a5d9deb14edde8af46e1159","used":["tools.py","main.py (agent wiring adapted for HTTP and isolated reports)"]}
+]

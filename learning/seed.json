@@ -1,0 +1,252 @@
+{
+  "lessons": [
+    {
+      "id": "sides",
+      "title": "Nhận diện các cạnh trong tam giác vuông",
+      "topic": "Lượng giác",
+      "grade": 9,
+      "level": "Nền tảng",
+      "minutes": 4,
+      "formula": "\\mathrm{hyp}^2 = \\mathrm{opp}^2 + \\mathrm{adj}^2",
+      "text": "Cạnh huyền nằm đối diện góc vuông và là cạnh dài nhất. Với một góc nhọn đã chọn, cạnh đối nằm đối diện góc đó; cạnh kề là cạnh góc vuông còn lại.",
+      "note": "Đổi góc đang xét sẽ đổi tên cạnh đối và cạnh kề, nhưng cạnh huyền không đổi.",
+      "source": "Nội dung biên soạn cho bản mẫu · Kiến thức Toán 9",
+      "kind": "triangle"
+    },
+    {
+      "id": "pythagoras",
+      "title": "Định lý Pythagoras",
+      "topic": "Tam giác vuông",
+      "grade": 8,
+      "level": "Nền tảng",
+      "minutes": 5,
+      "formula": "BC = \\sqrt{AB^2 + AC^2}",
+      "text": "Trong tam giác ABC vuông tại A, bình phương cạnh huyền BC bằng tổng bình phương hai cạnh góc vuông AB và AC. Hãy xác định đúng cạnh huyền trước khi thay số.",
+      "note": "Định lý chỉ áp dụng trực tiếp cho tam giác vuông.",
+      "source": "Nội dung biên soạn cho bản mẫu · Kiến thức Toán 8",
+      "kind": "triangle"
+    },
+    {
+      "id": "trig",
+      "title": "Tỉ số lượng giác của góc nhọn",
+      "topic": "Lượng giác",
+      "grade": 9,
+      "level": "Cần ôn tập",
+      "minutes": 6,
+      "formula": "\\sin\\theta = \\frac{\\mathrm{opp}}{\\mathrm{hyp}},\\quad \\cos\\theta = \\frac{\\mathrm{adj}}{\\mathrm{hyp}}",
+      "text": "Trong tam giác vuông, sin của một góc nhọn bằng cạnh đối chia cạnh huyền; cos bằng cạnh kề chia cạnh huyền; tan bằng cạnh đối chia cạnh kề.",
+      "note": "Sin và cos của góc nhọn luôn nằm giữa 0 và 1. Đây là một cách kiểm tra nhanh kết quả.",
+      "source": "Nội dung biên soạn cho bản mẫu · Kiến thức Toán 9",
+      "kind": "triangle"
+    },
+    {
+      "id": "area",
+      "title": "Diện tích tam giác",
+      "topic": "Hình học phẳng",
+      "grade": 8,
+      "level": "Nền tảng",
+      "minutes": 3,
+      "formula": "S = \\frac{1}{2}bh",
+      "text": "Diện tích tam giác bằng một nửa tích của độ dài đáy và chiều cao tương ứng. Chiều cao phải vuông góc với đáy đang xét.",
+      "note": "Trong tam giác vuông, hai cạnh góc vuông có thể chọn làm đáy và chiều cao.",
+      "source": "Nội dung biên soạn cho bản mẫu · Kiến thức Toán 8",
+      "kind": "prism"
+    },
+    {
+      "id": "prism",
+      "title": "Thể tích lăng trụ tam giác",
+      "topic": "Hình học không gian",
+      "grade": 8,
+      "level": "Cần ôn tập",
+      "minutes": 5,
+      "formula": "V = S_{\\text{đáy}}L = \\frac{1}{2}bhL",
+      "text": "Thể tích lăng trụ bằng diện tích đáy nhân chiều cao của lăng trụ. Với lăng trụ tam giác vuông đứng, tính diện tích tam giác đáy trước rồi nhân chiều dài L.",
+      "note": "Chiều cao h của tam giác đáy và chiều dài L của lăng trụ là hai đại lượng khác nhau.",
+      "source": "Nội dung biên soạn cho bản mẫu · Kiến thức Toán 8",
+      "kind": "prism"
+    },
+    {
+      "id": "sphere",
+      "title": "Thể tích hình cầu",
+      "topic": "Hình học không gian",
+      "grade": 9,
+      "level": "Cần ôn tập",
+      "minutes": 5,
+      "formula": "V = \\frac{4}{3}\\pi r^3",
+      "text": "Thể tích hình cầu tỉ lệ với lập phương bán kính. Khi bán kính tăng k lần, thể tích tăng k³ lần.",
+      "note": "Đừng nhầm thể tích với diện tích mặt cầu S = 4πr². Đơn vị thể tích là cm³ hoặc m³.",
+      "source": "Nội dung biên soạn cho bản mẫu · Kiến thức Toán 9",
+      "kind": "sphere"
+    }
+  ],
+  "prerequisites": [
+    [
+      "sides",
+      "pythagoras"
+    ],
+    [
+      "sides",
+      "trig"
+    ],
+    [
+      "pythagoras",
+      "trig"
+    ],
+    [
+      "area",
+      "prism"
+    ]
+  ],
+  "quizSets": {
+    "triangle": [
+      {
+        "concept": "sides",
+        "question": "Tam giác ABC vuông tại A. Cạnh huyền là cạnh nào?",
+        "options": [
+          "AB",
+          "AC",
+          "BC",
+          "Không xác định được"
+        ],
+        "correct": 2,
+        "explanation": "BC đối diện góc vuông A nên BC là cạnh huyền."
+      },
+      {
+        "concept": "pythagoras",
+        "question": "Hai cạnh góc vuông dài 3 cm và 4 cm. Cạnh huyền dài bao nhiêu?",
+        "options": [
+          "7 cm",
+          "5 cm",
+          "√7 cm",
+          "12 cm"
+        ],
+        "correct": 1,
+        "explanation": "Theo Pythagoras: BC² = 3² + 4² = 25, do đó BC = 5 cm."
+      },
+      {
+        "concept": "trig",
+        "question": "Với góc B, cạnh đối AC = 3 cm, cạnh huyền BC = 5 cm. sin B bằng bao nhiêu?",
+        "options": [
+          "4/5",
+          "3/4",
+          "5/3",
+          "3/5"
+        ],
+        "correct": 3,
+        "explanation": "sin B = cạnh đối / cạnh huyền = AC / BC = 3/5."
+      },
+      {
+        "concept": "trig",
+        "question": "Nếu đổi góc đang xét từ B sang C, điều gì xảy ra?",
+        "options": [
+          "Cạnh huyền thay đổi",
+          "Cạnh đối và cạnh kề đổi vai trò",
+          "Góc vuông chuyển sang B",
+          "Độ dài các cạnh thay đổi"
+        ],
+        "correct": 1,
+        "explanation": "Cạnh đối, cạnh kề phụ thuộc vào góc nhọn đang xét. Cạnh huyền vẫn là BC."
+      }
+    ],
+    "prism": [
+      {
+        "concept": "area",
+        "question": "Tam giác có đáy 4 cm, chiều cao tương ứng 3 cm. Diện tích là?",
+        "options": [
+          "12 cm²",
+          "7 cm²",
+          "6 cm²",
+          "24 cm²"
+        ],
+        "correct": 2,
+        "explanation": "S = ½ × 4 × 3 = 6 cm²."
+      },
+      {
+        "concept": "prism",
+        "question": "Lăng trụ có diện tích đáy 6 cm² và chiều dài 6 cm. Thể tích là?",
+        "options": [
+          "12 cm³",
+          "36 cm³",
+          "18 cm³",
+          "216 cm³"
+        ],
+        "correct": 1,
+        "explanation": "V = S đáy × L = 6 × 6 = 36 cm³."
+      },
+      {
+        "concept": "area",
+        "question": "Khi chọn chiều cao của tam giác, điều kiện nào phải đúng?",
+        "options": [
+          "Bằng cạnh đáy",
+          "Song song với đáy",
+          "Vuông góc với đáy",
+          "Là cạnh dài nhất"
+        ],
+        "correct": 2,
+        "explanation": "Chiều cao tương ứng phải vuông góc với cạnh đáy."
+      },
+      {
+        "concept": "prism",
+        "question": "Giữ diện tích đáy, tăng chiều dài lăng trụ gấp 2. Thể tích sẽ?",
+        "options": [
+          "Gấp 2",
+          "Gấp 4",
+          "Gấp 8",
+          "Không đổi"
+        ],
+        "correct": 0,
+        "explanation": "V tỉ lệ thuận với L khi diện tích đáy không đổi."
+      }
+    ],
+    "sphere": [
+      {
+        "concept": "sphere",
+        "question": "Công thức nào tính thể tích hình cầu?",
+        "options": [
+          "4πr²",
+          "πr²",
+          "(4/3)πr³",
+          "2πr"
+        ],
+        "correct": 2,
+        "explanation": "Thể tích hình cầu là V = (4/3)πr³."
+      },
+      {
+        "concept": "sphere",
+        "question": "Bán kính tăng gấp 2 thì thể tích hình cầu tăng gấp mấy lần?",
+        "options": [
+          "2 lần",
+          "4 lần",
+          "6 lần",
+          "8 lần"
+        ],
+        "correct": 3,
+        "explanation": "Thể tích tỉ lệ với r³, nên tăng 2³ = 8 lần."
+      },
+      {
+        "concept": "sphere",
+        "question": "Đường kính hình cầu là 6 cm. Bán kính là?",
+        "options": [
+          "12 cm",
+          "6 cm",
+          "3 cm",
+          "9 cm"
+        ],
+        "correct": 2,
+        "explanation": "Bán kính bằng một nửa đường kính: r = 6/2 = 3 cm."
+      },
+      {
+        "concept": "sphere",
+        "question": "Đơn vị nào thích hợp cho thể tích?",
+        "options": [
+          "cm",
+          "cm²",
+          "độ",
+          "cm³"
+        ],
+        "correct": 3,
+        "explanation": "Thể tích đo bằng đơn vị lập phương, ví dụ cm³ hoặc m³."
+      }
+    ]
+  }
+}
