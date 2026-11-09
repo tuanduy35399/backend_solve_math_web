@@ -30,11 +30,17 @@ class MaterialSerializer(serializers.ModelSerializer):
     id = serializers.SlugField(required=False, max_length=80, validators=[UniqueValidator(queryset=Material.objects.all(),message="Mã học liệu đã tồn tại.")])
     grade = serializers.IntegerField(min_value=6, max_value=12)
     minutes = serializers.IntegerField(min_value=1, max_value=120, required=False)
-    kind = serializers.ChoiceField(choices=['triangle','prism','sphere'])
+    kind = serializers.ChoiceField(choices=['triangle','prism','sphere','general'])
+    def validate(self,data):
+        if self.instance and 'grade' in data:
+            grade=data['grade']
+            if self.instance.requires.filter(source__grade__gt=grade).exists() or self.instance.unlocks.filter(target__grade__lt=grade).exists():
+                raise serializers.ValidationError({'grade':'Lớp mới làm quan hệ tiên quyết đi từ lớp cao xuống lớp thấp. Điều chỉnh quan hệ trước khi đổi lớp.'})
+        return data
     class Meta:
         model = Material
         exclude = ['owner']
-        read_only_fields = ['updated']
+        read_only_fields = ['updated', 'corpus_metadata']
 
 class SessionSerializer(serializers.ModelSerializer):
     type = serializers.CharField(source='kind', read_only=True)

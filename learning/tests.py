@@ -60,8 +60,8 @@ class IntegratedTests(TransactionTestCase):
         self.client.force_authenticate(self.teacher)
         self.assertEqual(self.client.post('/api/v1/edges/',{'source':'trig','target':'sides'}).status_code,400)
         self.assertEqual(self.client.post('/api/v1/edges/',{'source':'sides','target':'trig'}).status_code,400)
-        self.assertEqual(self.client.post('/api/v1/edges/',{'source':'sphere','target':'area'}).status_code,200)
-        self.assertEqual(self.client.delete('/api/v1/edges/',{'source':'sphere','target':'area'},format='json').status_code,200)
+        self.assertEqual(self.client.post('/api/v1/edges/',{'source':'area','target':'sphere'}).status_code,200)
+        self.assertEqual(self.client.delete('/api/v1/edges/',{'source':'area','target':'sphere'},format='json').status_code,200)
     def test_sessions_are_private(self):
         s=LearningSession.objects.create(user=self.other,title='Private')
         self.assertEqual(self.client.get(f'/api/v1/sessions/{s.pk}/').status_code,404)

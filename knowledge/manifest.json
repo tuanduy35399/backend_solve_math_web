@@ -1,0 +1,2101 @@
+{
+  "compiled_on": "2026-11-09",
+  "document_count": 88,
+  "by_grade": {
+    "6": 17,
+    "7": 25,
+    "8": 22,
+    "9": 24
+  },
+  "sources_file": "sources.json",
+  "documents": [
+    {
+      "id": "g6-diem-duong-thang",
+      "grade": 6,
+      "title": "Điểm, đường thẳng và ba điểm thẳng hàng",
+      "document_type": "concept",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "A\\ne B\\Rightarrow \\exists!\\,d:\\ A,B\\in d",
+      "prerequisites": [],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g6-b32"
+      ],
+      "source_reference": "https://vietjack.com/toan-6-ket-noi/ly-thuyet-bai-32-diem-va-duong-thang.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-6/diem-duong-thang.md",
+      "sha256": "bda00373f65408ba39138ad90eba7be79d1b9d7df3a02272f53255571ee2b446"
+    },
+    {
+      "id": "g6-diem-nam-giua",
+      "grade": 6,
+      "title": "Điểm nằm giữa và phép cộng độ dài đoạn thẳng",
+      "document_type": "property",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "AB+BC=AC",
+      "prerequisites": [
+        "g6-diem-duong-thang"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g6-b33"
+      ],
+      "source_reference": "https://vietjack.com/toan-6-ket-noi/ly-thuyet-bai-33-diem-nam-giua-hai-diem-tia.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-6/diem-nam-giua.md",
+      "sha256": "24e0a2f66a93d14251fdfb146713437898b1ab7452f7b419ef68556602a65685"
+    },
+    {
+      "id": "g6-tia-hai-tia-doi",
+      "grade": 6,
+      "title": "Tia và hai tia đối nhau",
+      "document_type": "concept",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "\\widehat{xOy}=180^\\circ\\quad\\text{khi }Ox,Oy\\text{ đối nhau}",
+      "prerequisites": [
+        "g6-diem-nam-giua"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g6-b33"
+      ],
+      "source_reference": "https://vietjack.com/toan-6-ket-noi/ly-thuyet-bai-33-diem-nam-giua-hai-diem-tia.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-6/tia-hai-tia-doi.md",
+      "sha256": "7e78ec05fd4aea6f4b3cc2a7769cacaa0d11a87ffd1555cf25098ed6212eac0f"
+    },
+    {
+      "id": "g6-doan-thang-do-dai",
+      "grade": 6,
+      "title": "Đoạn thẳng và độ dài",
+      "document_type": "concept",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "AB=BA;\\quad 1\\,\\mathrm{m}=100\\,\\mathrm{cm}",
+      "prerequisites": [
+        "g6-diem-duong-thang"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g6-b34"
+      ],
+      "source_reference": "https://vietjack.com/toan-6-ket-noi/ly-thuyet-bai-34-doan-thang-do-dai-doan-thang.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-6/doan-thang-do-dai.md",
+      "sha256": "ed9fe90a47c25a570a90b5d8ade3687494379a015b18c6adba0f4b36ebf53002"
+    },
+    {
+      "id": "g6-trung-diem",
+      "grade": 6,
+      "title": "Trung điểm của đoạn thẳng",
+      "document_type": "concept",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "MA=MB=\\frac{AB}{2}",
+      "prerequisites": [
+        "g6-diem-nam-giua",
+        "g6-doan-thang-do-dai"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g6-b35"
+      ],
+      "source_reference": "https://vietjack.com/toan-6-ket-noi/ly-thuyet-bai-35-trung-diem-cua-doan-thang.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-6/trung-diem.md",
+      "sha256": "745f99c4e51bb5b6488c26a6af36212e8de39d0719c8e4303fa70633b56b9eee"
+    },
+    {
+      "id": "g6-goc",
+      "grade": 6,
+      "title": "Góc, đỉnh và hai cạnh của góc",
+      "document_type": "concept",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "\\widehat{ABC}=\\widehat{CBA}",
+      "prerequisites": [
+        "g6-tia-hai-tia-doi"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g6-b36"
+      ],
+      "source_reference": "https://vietjack.com/toan-6-ket-noi/ly-thuyet-bai-36-goc.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-6/goc.md",
+      "sha256": "e88ce274d5074ade5a506cd0346b8e14c37834874b3e669dd24452ac2248addb"
+    },
+    {
+      "id": "g6-so-do-goc",
+      "grade": 6,
+      "title": "Số đo và phân loại góc",
+      "document_type": "property",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "0^\\circ<\\alpha<90^\\circ;\\quad \\alpha=90^\\circ;\\quad90^\\circ<\\alpha<180^\\circ",
+      "prerequisites": [
+        "g6-goc"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g6-b37"
+      ],
+      "source_reference": "https://vietjack.com/toan-6-ket-noi/ly-thuyet-bai-37-so-do-goc.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-6/so-do-goc.md",
+      "sha256": "a1d82a0113d9ecad67628eb0290c1ac05bb6d38238e31c5cafd3ad7ea77437c0"
+    },
+    {
+      "id": "g6-tam-giac-deu-truc-quan",
+      "grade": 6,
+      "title": "Nhận biết trực quan tam giác đều",
+      "document_type": "concept",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "AB=BC=CA",
+      "prerequisites": [
+        "g6-doan-thang-do-dai"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g6-b18"
+      ],
+      "source_reference": "https://vietjack.com/toan-6-ket-noi/ly-thuyet-bai-18-hinh-tam-giac-deu-hinh-vuong-hinh-luc-giac-deu.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-6/tam-giac-deu-truc-quan.md",
+      "sha256": "c420358a6469c4c143b4295f2f54885a116b847dfa103e279f5bfb8e2124480f"
+    },
+    {
+      "id": "g6-hinh-vuong-truc-quan",
+      "grade": 6,
+      "title": "Nhận biết trực quan hình vuông",
+      "document_type": "concept",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "P=4a;\\quad S=a^2",
+      "prerequisites": [
+        "g6-so-do-goc",
+        "g6-doan-thang-do-dai"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g6-b18"
+      ],
+      "source_reference": "https://vietjack.com/toan-6-ket-noi/ly-thuyet-bai-18-hinh-tam-giac-deu-hinh-vuong-hinh-luc-giac-deu.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-6/hinh-vuong-truc-quan.md",
+      "sha256": "1ba105a9e09505a80d5d647dacec216593409e989ba6fbfa977d30701debccda"
+    },
+    {
+      "id": "g6-luc-giac-deu",
+      "grade": 6,
+      "title": "Nhận biết trực quan hình lục giác đều",
+      "document_type": "concept",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "P=6a",
+      "prerequisites": [
+        "g6-tam-giac-deu-truc-quan"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g6-b18"
+      ],
+      "source_reference": "https://vietjack.com/toan-6-ket-noi/ly-thuyet-bai-18-hinh-tam-giac-deu-hinh-vuong-hinh-luc-giac-deu.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-6/luc-giac-deu.md",
+      "sha256": "a9bed1d76a1e6692ee0781a6bb2b42eb90b5e131d5f1cbef060dbee7cdce8827"
+    },
+    {
+      "id": "g6-nhan-biet-tu-giac",
+      "grade": 6,
+      "title": "Nhận biết hình chữ nhật, bình hành, thoi và thang cân",
+      "document_type": "concept",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "AB\\parallel CD,\\ AD\\parallel BC\\quad\\text{(hình bình hành)}",
+      "prerequisites": [
+        "g6-hinh-vuong-truc-quan",
+        "g6-so-do-goc"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g6-b19"
+      ],
+      "source_reference": "https://vietjack.com/toan-6-ket-noi/ly-thuyet-bai-19-hinh-chu-nhat-hinh-thoi-hinh-binh-hanh-hinh-thang-can.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-6/nhan-biet-tu-giac.md",
+      "sha256": "593df353f8f7b5b44294c2b3a84396e8512d17f80534869493359165e2903c0a"
+    },
+    {
+      "id": "g6-chu-vi-dien-tich-chu-nhat",
+      "grade": 6,
+      "title": "Chu vi và diện tích hình chữ nhật",
+      "document_type": "formula",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "P=2(a+b);\\quad S=ab",
+      "prerequisites": [
+        "g6-nhan-biet-tu-giac"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g6-b20"
+      ],
+      "source_reference": "https://vietjack.com/toan-6-ket-noi/ly-thuyet-bai-20-chu-vi-va-dien-tich-cua-mot-so-tu-giac-da-hoc.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-6/chu-vi-dien-tich-chu-nhat.md",
+      "sha256": "0dbdb8111aa4f203702d042edc00b665d77c9913a8aa654cdeca5854be52e28d"
+    },
+    {
+      "id": "g6-dien-tich-binh-hanh",
+      "grade": 6,
+      "title": "Chu vi và diện tích hình bình hành",
+      "document_type": "formula",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "S=ah;\\quad P=2(a+b)",
+      "prerequisites": [
+        "g6-nhan-biet-tu-giac",
+        "g6-chu-vi-dien-tich-chu-nhat"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g6-b20"
+      ],
+      "source_reference": "https://vietjack.com/toan-6-ket-noi/ly-thuyet-bai-20-chu-vi-va-dien-tich-cua-mot-so-tu-giac-da-hoc.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-6/dien-tich-binh-hanh.md",
+      "sha256": "2549110127b2ec6381904dd2d3dce492cd5c67eb39ccb39e4ced387ff471927f"
+    },
+    {
+      "id": "g6-dien-tich-hinh-thoi",
+      "grade": 6,
+      "title": "Chu vi và diện tích hình thoi",
+      "document_type": "formula",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "S=\\frac{d_1d_2}{2};\\quad P=4a",
+      "prerequisites": [
+        "g6-nhan-biet-tu-giac"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g6-b20"
+      ],
+      "source_reference": "https://vietjack.com/toan-6-ket-noi/ly-thuyet-bai-20-chu-vi-va-dien-tich-cua-mot-so-tu-giac-da-hoc.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-6/dien-tich-hinh-thoi.md",
+      "sha256": "6252d75340870b06031f7ced921bdd1dc6aadf9712ad4e382a63fa9bf9698e60"
+    },
+    {
+      "id": "g6-dien-tich-hinh-thang",
+      "grade": 6,
+      "title": "Chu vi và diện tích hình thang",
+      "document_type": "formula",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "S=\\frac{(a+b)h}{2};\\quad P=a+b+c+d",
+      "prerequisites": [
+        "g6-nhan-biet-tu-giac"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g6-b20"
+      ],
+      "source_reference": "https://vietjack.com/toan-6-ket-noi/ly-thuyet-bai-20-chu-vi-va-dien-tich-cua-mot-so-tu-giac-da-hoc.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-6/dien-tich-hinh-thang.md",
+      "sha256": "d82121f52f6cd3b221f65bb2b31ca9c671f03e6ddfb895a29f11ef6f7ce2049a"
+    },
+    {
+      "id": "g6-truc-doi-xung",
+      "grade": 6,
+      "title": "Trục đối xứng của hình phẳng",
+      "document_type": "concept",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "\\text{Hình vuông có }4\\text{ trục đối xứng}",
+      "prerequisites": [
+        "g6-trung-diem",
+        "g6-nhan-biet-tu-giac"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g6-b21"
+      ],
+      "source_reference": "https://vietjack.com/toan-6-ket-noi/ly-thuyet-bai-21-hinh-co-truc-doi-xung.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-6/truc-doi-xung.md",
+      "sha256": "ca79fdeb4b4cff54b9174322801d68cde9817da40fa4540347072d5a8cc650f9"
+    },
+    {
+      "id": "g6-tam-doi-xung",
+      "grade": 6,
+      "title": "Tâm đối xứng của hình phẳng",
+      "document_type": "concept",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "\\widehat{AOA^{\\prime}}=180^\\circ;\\quad OA=OA^{\\prime}",
+      "prerequisites": [
+        "g6-trung-diem",
+        "g6-truc-doi-xung"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g6-b22"
+      ],
+      "source_reference": "https://vietjack.com/toan-6-ket-noi/ly-thuyet-bai-22-hinh-co-tam-doi-xung.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-6/tam-doi-xung.md",
+      "sha256": "70fde180d9ef4ef66a1eeeb8157033e152e5a1f58018ce117788698ffb8d051d"
+    },
+    {
+      "id": "g7-goc-doi-dinh-ke-bu",
+      "grade": 7,
+      "title": "Hai góc đối đỉnh và hai góc kề bù",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "\\alpha=\\alpha^{\\prime};\\quad\\alpha+\\beta=180^\\circ",
+      "prerequisites": [
+        "g6-so-do-goc",
+        "g6-tia-hai-tia-doi"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g7-b8"
+      ],
+      "source_reference": "https://vietjack.com/toan-7-kn/ly-thuyet-bai-8-goc-o-vi-tri-dac-biet-tia-phan-giac-cua-mot-goc.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-7/goc-doi-dinh-ke-bu.md",
+      "sha256": "966d76e92ecd24392dd76abfcdc56c534216d6fc4296eed027d6df40e28c2d5c"
+    },
+    {
+      "id": "g7-tia-phan-giac",
+      "grade": 7,
+      "title": "Tia phân giác của một góc",
+      "document_type": "concept",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "\\widehat{xOz}=\\widehat{zOy}=\\frac12\\widehat{xOy}",
+      "prerequisites": [
+        "g6-goc",
+        "g6-so-do-goc"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g7-b8"
+      ],
+      "source_reference": "https://vietjack.com/toan-7-kn/ly-thuyet-bai-8-goc-o-vi-tri-dac-biet-tia-phan-giac-cua-mot-goc.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-7/tia-phan-giac.md",
+      "sha256": "17e40e477663048a2decd579c6bdef9d0e0004cab59a681b72296fb7303648f5"
+    },
+    {
+      "id": "g7-dau-hieu-song-song",
+      "grade": 7,
+      "title": "Dấu hiệu nhận biết hai đường thẳng song song",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "\\widehat{A_1}=\\widehat{B_1}\\Rightarrow a\\parallel b\\quad\\text{(đồng vị)}",
+      "prerequisites": [
+        "g7-goc-doi-dinh-ke-bu"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g7-b9"
+      ],
+      "source_reference": "https://vietjack.com/toan-7-kn/ly-thuyet-bai-9-hai-duong-thang-song-song-va-dau-hieu-nhan-biet.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-7/dau-hieu-song-song.md",
+      "sha256": "560118f1eac6b08f834487a0a84b12296f31ce1560e7b65f91cf78f6dddbced0"
+    },
+    {
+      "id": "g7-tien-de-tinh-chat-song-song",
+      "grade": 7,
+      "title": "Tiên đề Euclid và tính chất đường thẳng song song",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "a\\parallel b\\Rightarrow\\alpha+\\beta=180^\\circ\\quad\\text{(trong cùng phía)}",
+      "prerequisites": [
+        "g7-dau-hieu-song-song"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g7-b10"
+      ],
+      "source_reference": "https://vietjack.com/toan-7-kn/ly-thuyet-bai-10-tien-de-euclid-tinh-chat-cua-hai-duong-thang-song-song.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-7/tien-de-tinh-chat-song-song.md",
+      "sha256": "7fa18803d6a84fd767ae18aa143f8e337cc9b189392fa930d47254bcf99800c3"
+    },
+    {
+      "id": "g7-gia-thiet-ket-luan",
+      "grade": 7,
+      "title": "Giả thiết, kết luận và chứng minh định lý",
+      "document_type": "concept",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "\\text{Giả thiết}\\Rightarrow\\text{Kết luận}",
+      "prerequisites": [
+        "g7-goc-doi-dinh-ke-bu"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g7-b11"
+      ],
+      "source_reference": "https://vietjack.com/toan-7-kn/ly-thuyet-bai-11-dinh-li-va-chung-minh-dinh-li.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-7/gia-thiet-ket-luan.md",
+      "sha256": "154ce356fbe61e7bfed974347963c8c6ed2f6e575bced51a7fd77aaaede64d5a"
+    },
+    {
+      "id": "g7-tong-goc-tam-giac",
+      "grade": 7,
+      "title": "Tổng ba góc của một tam giác",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "\\widehat A+\\widehat B+\\widehat C=180^\\circ",
+      "prerequisites": [
+        "g7-tien-de-tinh-chat-song-song"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g7-b12"
+      ],
+      "source_reference": "https://vietjack.com/toan-7-kn/ly-thuyet-bai-12-tong-cac-goc-trong-mot-tam-giac.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-7/tong-goc-tam-giac.md",
+      "sha256": "6e689dba424c34c7bf2923ce90a773c5890cc38cb0fe5cc97b569eb3495f1de3"
+    },
+    {
+      "id": "g7-goc-ngoai-tam-giac",
+      "grade": 7,
+      "title": "Góc ngoài của tam giác",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "\\widehat{ACD}=\\widehat A+\\widehat B\\quad(B,C,D\\text{ thẳng hàng, }C\\text{ giữa }B,D)",
+      "prerequisites": [
+        "g7-tong-goc-tam-giac",
+        "g7-goc-doi-dinh-ke-bu"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g7-b12"
+      ],
+      "source_reference": "https://vietjack.com/toan-7-kn/ly-thuyet-bai-12-tong-cac-goc-trong-mot-tam-giac.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-7/goc-ngoai-tam-giac.md",
+      "sha256": "8ea9bda20499f5400cf99b1144eb999c56a29749a9e563a94e3e8f664ba1b789"
+    },
+    {
+      "id": "g7-bang-nhau-ccc",
+      "grade": 7,
+      "title": "Tam giác bằng nhau theo cạnh cạnh cạnh",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "AB=DE,\\ BC=EF,\\ CA=FD\\Rightarrow\\triangle ABC\\cong\\triangle DEF",
+      "prerequisites": [
+        "g6-doan-thang-do-dai",
+        "g7-gia-thiet-ket-luan"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g7-b13"
+      ],
+      "source_reference": "https://vietjack.com/toan-7-kn/ly-thuyet-bai-13-hai-tam-giac-bang-nhau-truong-hop-bang-nhau-thu-nhat.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-7/bang-nhau-ccc.md",
+      "sha256": "54d656c50c6ff9c6bca0fed4e76195d68208679a41b1aa83bf3199af0ea99cb6"
+    },
+    {
+      "id": "g7-bang-nhau-cgc",
+      "grade": 7,
+      "title": "Tam giác bằng nhau theo cạnh góc cạnh",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "AB=DE,\\ AC=DF,\\widehat A=\\widehat D\\Rightarrow\\triangle ABC\\cong\\triangle DEF",
+      "prerequisites": [
+        "g7-bang-nhau-ccc",
+        "g6-goc"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g7-b14"
+      ],
+      "source_reference": "https://vietjack.com/toan-7-kn/ly-thuyet-bai-14-truong-hop-bang-nhau-thu-hai-va-thu-ba-cua-tam-giac.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-7/bang-nhau-cgc.md",
+      "sha256": "4cd40cce52187bd43f0e79d5e5156cb25e78e0e3a8658f5e36b0d52deadbf09e"
+    },
+    {
+      "id": "g7-bang-nhau-gcg",
+      "grade": 7,
+      "title": "Tam giác bằng nhau theo góc cạnh góc",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "BC=EF,\\widehat B=\\widehat E,\\widehat C=\\widehat F\\Rightarrow\\triangle ABC\\cong\\triangle DEF",
+      "prerequisites": [
+        "g7-tong-goc-tam-giac",
+        "g7-bang-nhau-ccc"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g7-b14"
+      ],
+      "source_reference": "https://vietjack.com/toan-7-kn/ly-thuyet-bai-14-truong-hop-bang-nhau-thu-hai-va-thu-ba-cua-tam-giac.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-7/bang-nhau-gcg.md",
+      "sha256": "82bf48d2829c14df8066af12dc850b437f72ce99821be276b5b194682af69b72"
+    },
+    {
+      "id": "g7-bang-nhau-tam-giac-vuong",
+      "grade": 7,
+      "title": "Các trường hợp bằng nhau của tam giác vuông",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "BC=EF,\\ AB=DE,\\widehat A=\\widehat D=90^\\circ\\Rightarrow\\triangle ABC\\cong\\triangle DEF",
+      "prerequisites": [
+        "g7-bang-nhau-cgc",
+        "g7-bang-nhau-gcg"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g7-b15"
+      ],
+      "source_reference": "https://vietjack.com/toan-7-kn/ly-thuyet-bai-15-cac-truong-hop-bang-nhau-cua-tam-giac-vuong.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-7/bang-nhau-tam-giac-vuong.md",
+      "sha256": "d4073ea1001493d805b7c48f088a3d25a63b9e13703f6938028282e62b840f25"
+    },
+    {
+      "id": "g7-tam-giac-can",
+      "grade": 7,
+      "title": "Tính chất và dấu hiệu tam giác cân",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "AB=AC\\Longleftrightarrow\\widehat B=\\widehat C",
+      "prerequisites": [
+        "g7-tong-goc-tam-giac",
+        "g7-bang-nhau-cgc"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g7-b16"
+      ],
+      "source_reference": "https://vietjack.com/toan-7-kn/ly-thuyet-bai-16-tam-giac-can-duong-trung-truc-cua-doan-thang.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-7/tam-giac-can.md",
+      "sha256": "124548e6620c0e2c40d994a0b644b4acb9ca42ba9c44c50331be0fa1565d92b7"
+    },
+    {
+      "id": "g7-tam-giac-deu-tinh-chat",
+      "grade": 7,
+      "title": "Tam giác đều và dấu hiệu nhận biết",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "AB=BC=CA\\Rightarrow\\widehat A=\\widehat B=\\widehat C=60^\\circ",
+      "prerequisites": [
+        "g7-tam-giac-can",
+        "g6-tam-giac-deu-truc-quan"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g7-b16"
+      ],
+      "source_reference": "https://vietjack.com/toan-7-kn/ly-thuyet-bai-16-tam-giac-can-duong-trung-truc-cua-doan-thang.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-7/tam-giac-deu-tinh-chat.md",
+      "sha256": "f4f7ce63334155ebcb78109353950dc45619ef22963bde419f05604121ab98e7"
+    },
+    {
+      "id": "g7-duong-trung-truc",
+      "grade": 7,
+      "title": "Đường trung trực và tính chất cách đều",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "M\\in\\text{trung trực}(AB)\\Longleftrightarrow MA=MB",
+      "prerequisites": [
+        "g6-trung-diem",
+        "g7-bang-nhau-ccc"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g7-b16"
+      ],
+      "source_reference": "https://vietjack.com/toan-7-kn/ly-thuyet-bai-16-tam-giac-can-duong-trung-truc-cua-doan-thang.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-7/duong-trung-truc.md",
+      "sha256": "0ace690c7e1b0ccdab2c3c1dd643c222a0a3f8091e1d207948e69167dc6d9e17"
+    },
+    {
+      "id": "g7-quan-he-goc-canh",
+      "grade": 7,
+      "title": "Quan hệ giữa góc và cạnh đối diện trong tam giác",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "AB>AC\\Longleftrightarrow\\widehat C>\\widehat B",
+      "prerequisites": [
+        "g7-tam-giac-can"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g7-b31"
+      ],
+      "source_reference": "https://vietjack.com/toan-7-kn/ly-thuyet-bai-31-quan-he-giua-goc-va-canh-doi-dien-trong-mot-tam-giac.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-7/quan-he-goc-canh.md",
+      "sha256": "5ecdecd19227260ed0c1db30cc675cec573e53df9c97b3fc39ff34a2222f575a"
+    },
+    {
+      "id": "g7-vuong-goc-duong-xien",
+      "grade": 7,
+      "title": "Đường vuông góc là khoảng cách ngắn nhất tới đường thẳng",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "AH\\perp d\\Rightarrow AH<AB",
+      "prerequisites": [
+        "g6-so-do-goc",
+        "g7-quan-he-goc-canh"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g7-b32"
+      ],
+      "source_reference": "https://vietjack.com/toan-7-kn/ly-thuyet-bai-32-quan-he-duong-vuong-goc-va-duong-xien.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-7/vuong-goc-duong-xien.md",
+      "sha256": "118624ec7312039f263fb03fddf147d7b90ec32eb4fa6955bd64095f6cd04533"
+    },
+    {
+      "id": "g7-bat-dang-thuc-tam-giac",
+      "grade": 7,
+      "title": "Bất đẳng thức tam giác",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "|b-c|<a<b+c",
+      "prerequisites": [
+        "g7-quan-he-goc-canh"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g7-b33"
+      ],
+      "source_reference": "https://vietjack.com/toan-7-kn/ly-thuyet-bai-33-quan-he-giua-ba-canh-cua-mot-tam-giac.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-7/bat-dang-thuc-tam-giac.md",
+      "sha256": "041b6621ec63b2ddbf924d1d357461a76626e254fce8bc5f46d21ecfbac9993a"
+    },
+    {
+      "id": "g7-trong-tam",
+      "grade": 7,
+      "title": "Ba trung tuyến và trọng tâm",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "AG:GM=2:1;\\quad AG=\\frac23 AM",
+      "prerequisites": [
+        "g6-trung-diem",
+        "g7-bang-nhau-ccc"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g7-b34"
+      ],
+      "source_reference": "https://vietjack.com/toan-7-kn/ly-thuyet-bai-34-su-dong-quy-cua-ba-duong-trung-tuyen-ba-duong-phan-giac.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-7/trong-tam.md",
+      "sha256": "77bf470b30a22359670bbbfb13ba3fea596d4ea73828e2ebf7e05ddcf1bbc1e9"
+    },
+    {
+      "id": "g7-dong-quy-phan-giac",
+      "grade": 7,
+      "title": "Ba phân giác trong và tâm đường tròn nội tiếp",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "d(I,AB)=d(I,BC)=d(I,CA)",
+      "prerequisites": [
+        "g7-tia-phan-giac",
+        "g7-vuong-goc-duong-xien"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g7-b34"
+      ],
+      "source_reference": "https://vietjack.com/toan-7-kn/ly-thuyet-bai-34-su-dong-quy-cua-ba-duong-trung-tuyen-ba-duong-phan-giac.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-7/dong-quy-phan-giac.md",
+      "sha256": "ac5ad37ca663f7ec1943dec8d381d350b6627f873b1786ae6a2bb3af27741fe2"
+    },
+    {
+      "id": "g7-dong-quy-trung-truc",
+      "grade": 7,
+      "title": "Ba đường trung trực và tâm đường tròn ngoại tiếp",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "OA=OB=OC",
+      "prerequisites": [
+        "g7-duong-trung-truc"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g7-b35"
+      ],
+      "source_reference": "https://vietjack.com/toan-7-kn/ly-thuyet-bai-35-su-dong-quy-cua-ba-duong-trung-truc-ba-duong-cao-trong.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-7/dong-quy-trung-truc.md",
+      "sha256": "e1b35af779f8a3868bddc9d61af3b316e615a930015d9bc4addb17da9e6232d0"
+    },
+    {
+      "id": "g7-truc-tam",
+      "grade": 7,
+      "title": "Ba đường cao và trực tâm",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "AH\\perp BC,\\ BH\\perp AC\\Rightarrow CH\\perp AB",
+      "prerequisites": [
+        "g7-tien-de-tinh-chat-song-song",
+        "g6-so-do-goc"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g7-b35"
+      ],
+      "source_reference": "https://vietjack.com/toan-7-kn/ly-thuyet-bai-35-su-dong-quy-cua-ba-duong-trung-truc-ba-duong-cao-trong.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-7/truc-tam.md",
+      "sha256": "404898800f7339f4bd7e1b396adbeca95e32a87deb2f032a4468864882fbcb24"
+    },
+    {
+      "id": "g7-hinh-hop-chu-nhat",
+      "grade": 7,
+      "title": "Diện tích xung quanh và thể tích hình hộp chữ nhật",
+      "document_type": "formula",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "S_{xq}=2(a+b)h;\\quad S_{tp}=2(ab+ah+bh);\\quad V=abh",
+      "prerequisites": [
+        "g6-chu-vi-dien-tich-chu-nhat"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g7-b36"
+      ],
+      "source_reference": "https://vietjack.com/toan-7-kn/ly-thuyet-bai-36-hinh-hop-chu-nhat-va-hinh-lap-phuong.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-7/hinh-hop-chu-nhat.md",
+      "sha256": "ea9bfe1032ca82311a73f40d0a59da730e12953fb28b03a16da0978e6cd2cbf7"
+    },
+    {
+      "id": "g7-hinh-lap-phuong",
+      "grade": 7,
+      "title": "Diện tích và thể tích hình lập phương",
+      "document_type": "formula",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "S_{xq}=4a^2;\\quad S_{tp}=6a^2;\\quad V=a^3",
+      "prerequisites": [
+        "g6-hinh-vuong-truc-quan",
+        "g7-hinh-hop-chu-nhat"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g7-b36"
+      ],
+      "source_reference": "https://vietjack.com/toan-7-kn/ly-thuyet-bai-36-hinh-hop-chu-nhat-va-hinh-lap-phuong.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-7/hinh-lap-phuong.md",
+      "sha256": "5631882a1e034f51f885fbbadf43508d9504acff201fb82f22ac3e4ee251703f"
+    },
+    {
+      "id": "g7-lang-tru-dung",
+      "grade": 7,
+      "title": "Diện tích xung quanh và thể tích lăng trụ đứng",
+      "document_type": "formula",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "S_{xq}=P_{\\text{đáy}}H;\\quad V=S_{\\text{đáy}}H",
+      "prerequisites": [
+        "g7-hinh-hop-chu-nhat",
+        "g7-dien-tich-tam-giac"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g7-b37"
+      ],
+      "source_reference": "https://vietjack.com/toan-7-kn/ly-thuyet-bai-37-hinh-lang-tru-dung-tam-giac-va-hinh-lang-tru-dung.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-7/lang-tru-dung.md",
+      "sha256": "22649aac2d094b3a5d0b6192037704a381db0fa69b8c5c8356538941b6b5093a"
+    },
+    {
+      "id": "g7-dien-tich-tam-giac",
+      "grade": 7,
+      "title": "Ôn tập diện tích tam giác để tính đáy lăng trụ",
+      "document_type": "formula",
+      "scope": "on-tap-kien-thuc-nen",
+      "formula_latex": "S=\\frac12 bh",
+      "prerequisites": [
+        "g6-chu-vi-dien-tich-chu-nhat",
+        "g7-vuong-goc-duong-xien"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g7-b37"
+      ],
+      "source_reference": "https://vietjack.com/toan-7-kn/ly-thuyet-bai-37-hinh-lang-tru-dung-tam-giac-va-hinh-lang-tru-dung.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-7/dien-tich-tam-giac.md",
+      "sha256": "4f0997ad6311e3bd25955300bd038db84f14a1a84512c92f359c291bb69958cc"
+    },
+    {
+      "id": "g8-tong-goc-tu-giac",
+      "grade": 8,
+      "title": "Tổng các góc của một tứ giác",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "\\widehat A+\\widehat B+\\widehat C+\\widehat D=360^\\circ",
+      "prerequisites": [
+        "g7-tong-goc-tam-giac"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g8-b10"
+      ],
+      "source_reference": "https://vietjack.com/toan-8-kn/ly-thuyet-bai-10-tu-giac.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-8/tong-goc-tu-giac.md",
+      "sha256": "d42806c9994eacbdf2ce06b1b4bb30064c75c6b264096a68a7843b205e4041c6"
+    },
+    {
+      "id": "g8-hinh-thang-can",
+      "grade": 8,
+      "title": "Tính chất và dấu hiệu hình thang cân",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "AB\\parallel CD,\\ \\widehat A=\\widehat B\\Rightarrow AD=BC,\\ AC=BD",
+      "prerequisites": [
+        "g8-tong-goc-tu-giac",
+        "g7-tien-de-tinh-chat-song-song"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g8-b11"
+      ],
+      "source_reference": "https://vietjack.com/toan-8-kn/ly-thuyet-bai-11-hinh-thang-can.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-8/hinh-thang-can.md",
+      "sha256": "cc289c8e6f150fbcb71b70a60394dae822907a782b5300a918189b90ee9c63df"
+    },
+    {
+      "id": "g8-binh-hanh-tinh-chat",
+      "grade": 8,
+      "title": "Tính chất hình bình hành",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "AB=CD,\\ AD=BC;\\ OA=OC,\\ OB=OD",
+      "prerequisites": [
+        "g7-tien-de-tinh-chat-song-song",
+        "g7-bang-nhau-gcg"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g8-b12"
+      ],
+      "source_reference": "https://vietjack.com/toan-8-kn/ly-thuyet-bai-12-hinh-binh-hanh.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-8/binh-hanh-tinh-chat.md",
+      "sha256": "2970f4fe260fcf484484ea24f6deddf871b9e0dc7e8628e2cb698d4acca04c9a"
+    },
+    {
+      "id": "g8-binh-hanh-nhan-biet",
+      "grade": 8,
+      "title": "Các dấu hiệu nhận biết hình bình hành",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "OA=OC,\\ OB=OD\\Rightarrow ABCD\\text{ là hình bình hành}",
+      "prerequisites": [
+        "g8-binh-hanh-tinh-chat"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g8-b12"
+      ],
+      "source_reference": "https://vietjack.com/toan-8-kn/ly-thuyet-bai-12-hinh-binh-hanh.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-8/binh-hanh-nhan-biet.md",
+      "sha256": "acfa586e7150bee0733ee4f50a07e21a9f6c735ae479b0c9dd587d55b1f126e3"
+    },
+    {
+      "id": "g8-hinh-chu-nhat",
+      "grade": 8,
+      "title": "Tính chất và dấu hiệu hình chữ nhật",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "AC=BD;\\quad OA=OB=OC=OD",
+      "prerequisites": [
+        "g8-binh-hanh-tinh-chat",
+        "g8-binh-hanh-nhan-biet"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g8-b13"
+      ],
+      "source_reference": "https://vietjack.com/toan-8-kn/ly-thuyet-bai-13-hinh-chu-nhat.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-8/hinh-chu-nhat.md",
+      "sha256": "a712ebd64727fb97cfd9d9724f192c7cecfe6fe52e2e37dd2d3adc73756d5b69"
+    },
+    {
+      "id": "g8-trung-tuyen-canh-huyen",
+      "grade": 8,
+      "title": "Trung tuyến ứng với cạnh huyền và định lý đảo",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "\\widehat A=90^\\circ\\Longleftrightarrow AM=BM=CM=\\frac12BC",
+      "prerequisites": [
+        "g8-hinh-chu-nhat",
+        "g6-trung-diem"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g8-b13"
+      ],
+      "source_reference": "https://vietjack.com/toan-8-kn/ly-thuyet-bai-13-hinh-chu-nhat.jsp",
+      "compiled_on": "2026-11-09",
+      "curriculum_note": "Chiều đảo được đưa vào như hệ quả bổ sung để luyện chứng minh.",
+      "file": "markdown/lop-8/trung-tuyen-canh-huyen.md",
+      "sha256": "2ce590274028d118c2ffd76f277127edb03106f9e9b43804535de761b676d903"
+    },
+    {
+      "id": "g8-hinh-thoi",
+      "grade": 8,
+      "title": "Tính chất và dấu hiệu hình thoi",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "AB=BC=CD=DA;\\quad AC\\perp BD",
+      "prerequisites": [
+        "g8-binh-hanh-tinh-chat",
+        "g7-tia-phan-giac"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g8-b14"
+      ],
+      "source_reference": "https://vietjack.com/toan-8-kn/ly-thuyet-bai-14-hinh-thoi-va-hinh-vuong.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-8/hinh-thoi.md",
+      "sha256": "d41ee940309555c9fe71270437bdf101c21b14a7fd438b9d07893359e2c3e668"
+    },
+    {
+      "id": "g8-hinh-vuong",
+      "grade": 8,
+      "title": "Tính chất và dấu hiệu hình vuông",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "AB=BC=CD=DA,\\ \\widehat A=90^\\circ",
+      "prerequisites": [
+        "g8-hinh-chu-nhat",
+        "g8-hinh-thoi"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g8-b14"
+      ],
+      "source_reference": "https://vietjack.com/toan-8-kn/ly-thuyet-bai-14-hinh-thoi-va-hinh-vuong.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-8/hinh-vuong.md",
+      "sha256": "dd5a49c0ec1c90e315669779d3852be4cac1264373f9f96197e51e5befbddc00"
+    },
+    {
+      "id": "g8-thales-thuan",
+      "grade": 8,
+      "title": "Định lý Thalès trong tam giác",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "\\frac{AD}{AB}=\\frac{AE}{AC}=\\frac{DE}{BC};\\quad\\frac{AD}{DB}=\\frac{AE}{EC}",
+      "prerequisites": [
+        "g7-tien-de-tinh-chat-song-song",
+        "g7-gia-thiet-ket-luan"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g8-b15"
+      ],
+      "source_reference": "https://vietjack.com/toan-8-kn/ly-thuyet-bai-15-dinh-li-thales-trong-tam-giac.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-8/thales-thuan.md",
+      "sha256": "d40c1ff96b3d720b497890ae5f6a6c6b03d316038f4018f3e228b42d833df321"
+    },
+    {
+      "id": "g8-thales-dao",
+      "grade": 8,
+      "title": "Định lý Thalès đảo",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "\\frac{AD}{DB}=\\frac{AE}{EC}\\Rightarrow DE\\parallel BC",
+      "prerequisites": [
+        "g8-thales-thuan"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g8-b15"
+      ],
+      "source_reference": "https://vietjack.com/toan-8-kn/ly-thuyet-bai-15-dinh-li-thales-trong-tam-giac.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-8/thales-dao.md",
+      "sha256": "3a6cc2311a9c82fc8a474e4d01dd396d7609530d1a02bfdad775d3cb8099141a"
+    },
+    {
+      "id": "g8-duong-trung-binh",
+      "grade": 8,
+      "title": "Đường trung bình của tam giác",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "MN\\parallel BC;\\quad MN=\\frac12BC",
+      "prerequisites": [
+        "g6-trung-diem",
+        "g8-thales-thuan",
+        "g8-thales-dao"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g8-b16"
+      ],
+      "source_reference": "https://vietjack.com/toan-8-kn/ly-thuyet-bai-16-duong-trung-binh-cua-tam-giac.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-8/duong-trung-binh.md",
+      "sha256": "9c184a77e15825392e416667aaaf1656cc2a17964ddc27eca2d8ac6c5db08e42"
+    },
+    {
+      "id": "g8-phan-giac-tam-giac",
+      "grade": 8,
+      "title": "Định lý phân giác trong của tam giác",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "\\frac{BD}{DC}=\\frac{AB}{AC}",
+      "prerequisites": [
+        "g7-tia-phan-giac",
+        "g8-thales-thuan"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g8-b17"
+      ],
+      "source_reference": "https://vietjack.com/toan-8-kn/ly-thuyet-bai-17-tinh-chat-duong-phan-giac-cua-tam-giac.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-8/phan-giac-tam-giac.md",
+      "sha256": "381cd80e95e2053aefb2a09eea89871bdc712ce1c75d858835b72db53ca0f165"
+    },
+    {
+      "id": "g8-dong-dang-khai-niem",
+      "grade": 8,
+      "title": "Hai tam giác đồng dạng và tỉ số đồng dạng",
+      "document_type": "concept",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "\\frac{AB}{DE}=\\frac{BC}{EF}=\\frac{CA}{FD}=k;\\quad\\frac{P_1}{P_2}=k;\\quad\\frac{S_1}{S_2}=k^2",
+      "prerequisites": [
+        "g7-bang-nhau-ccc",
+        "g8-thales-thuan"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g8-b33"
+      ],
+      "source_reference": "https://vietjack.com/toan-8-kn/ly-thuyet-bai-33-hai-tam-giac-dong-dang.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-8/dong-dang-khai-niem.md",
+      "sha256": "2929a50ee17353850f4a2ed7a9f15092b061fa3c74dcadd3c234a7047cc9c744"
+    },
+    {
+      "id": "g8-dong-dang-gg",
+      "grade": 8,
+      "title": "Đồng dạng theo góc góc",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "\\widehat A=\\widehat D,\\ \\widehat B=\\widehat E\\Rightarrow\\triangle ABC\\sim\\triangle DEF",
+      "prerequisites": [
+        "g8-dong-dang-khai-niem",
+        "g7-tong-goc-tam-giac"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g8-b34"
+      ],
+      "source_reference": "https://vietjack.com/toan-8-kn/ly-thuyet-bai-34-ba-truong-hop-dong-dang-cua-hai-tam-giac.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-8/dong-dang-gg.md",
+      "sha256": "4ab6e6e2f4f23634a3301a7407da7b578726d4b95cf3452f3be140c0fc026479"
+    },
+    {
+      "id": "g8-dong-dang-ccc",
+      "grade": 8,
+      "title": "Đồng dạng theo cạnh cạnh cạnh",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "\\frac{AB}{DE}=\\frac{BC}{EF}=\\frac{CA}{FD}\\Rightarrow\\triangle ABC\\sim\\triangle DEF",
+      "prerequisites": [
+        "g8-dong-dang-khai-niem"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g8-b34"
+      ],
+      "source_reference": "https://vietjack.com/toan-8-kn/ly-thuyet-bai-34-ba-truong-hop-dong-dang-cua-hai-tam-giac.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-8/dong-dang-ccc.md",
+      "sha256": "28ab7d0e46244e22764b085315e0f77867a4ed2a715b10aab78586d6b9501c85"
+    },
+    {
+      "id": "g8-dong-dang-cgc",
+      "grade": 8,
+      "title": "Đồng dạng theo cạnh góc cạnh",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "\\frac{AB}{DE}=\\frac{AC}{DF},\\ \\widehat A=\\widehat D\\Rightarrow\\triangle ABC\\sim\\triangle DEF",
+      "prerequisites": [
+        "g8-dong-dang-khai-niem",
+        "g7-bang-nhau-cgc"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g8-b34"
+      ],
+      "source_reference": "https://vietjack.com/toan-8-kn/ly-thuyet-bai-34-ba-truong-hop-dong-dang-cua-hai-tam-giac.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-8/dong-dang-cgc.md",
+      "sha256": "c2e2fbca5e7b00499f641a3ae7b17ff2970552a806472fff03c92d8eb5604e96"
+    },
+    {
+      "id": "g8-pythagore",
+      "grade": 8,
+      "title": "Định lý Pythagore",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "BC^2=AB^2+AC^2",
+      "prerequisites": [
+        "g7-tong-goc-tam-giac",
+        "g6-hinh-vuong-truc-quan"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g8-b35"
+      ],
+      "source_reference": "https://vietjack.com/toan-8-kn/ly-thuyet-bai-35-dinh-li-pythagore-va-ung-dung.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-8/pythagore.md",
+      "sha256": "98bfce4678a9d4ec62d458155ba06a2ccc881bb9ad35b6bd8d77ab126a204bae"
+    },
+    {
+      "id": "g8-pythagore-dao",
+      "grade": 8,
+      "title": "Định lý Pythagore đảo",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "a^2=b^2+c^2\\Rightarrow\\text{góc đối diện }a\\text{ bằng }90^\\circ",
+      "prerequisites": [
+        "g8-pythagore",
+        "g7-bat-dang-thuc-tam-giac"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g8-b35"
+      ],
+      "source_reference": "https://vietjack.com/toan-8-kn/ly-thuyet-bai-35-dinh-li-pythagore-va-ung-dung.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-8/pythagore-dao.md",
+      "sha256": "9e57594d4c602a720c81965eff6d63f8c9c8f2052b217129d9b56e7d9964ddf2"
+    },
+    {
+      "id": "g8-dong-dang-tam-giac-vuong",
+      "grade": 8,
+      "title": "Các trường hợp đồng dạng của tam giác vuông",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "\\frac{BC}{EF}=\\frac{AB}{DE},\\ \\widehat A=\\widehat D=90^\\circ\\Rightarrow\\triangle ABC\\sim\\triangle DEF",
+      "prerequisites": [
+        "g8-dong-dang-gg",
+        "g8-dong-dang-cgc",
+        "g8-pythagore"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g8-b36"
+      ],
+      "source_reference": "https://vietjack.com/toan-8-kn/ly-thuyet-bai-36-cac-truong-hop-dong-dang-cua-hai-tam-giac-vuong.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-8/dong-dang-tam-giac-vuong.md",
+      "sha256": "7436ba6d46ac29678cd6105c9bf728063088dadea67d8ac85f618f093e6f445a"
+    },
+    {
+      "id": "g8-hinh-dong-dang",
+      "grade": 8,
+      "title": "Hình đồng dạng và thay đổi kích thước",
+      "document_type": "property",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "L_1=kL_2;\\quad S_1=k^2S_2",
+      "prerequisites": [
+        "g8-dong-dang-khai-niem"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g8-b37"
+      ],
+      "source_reference": "https://vietjack.com/toan-8-kn/ly-thuyet-bai-37-hinh-dong-dang.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-8/hinh-dong-dang.md",
+      "sha256": "d4faffd86cf46ca43429a9329724b7d198caff073fdf0459d547de2507cbe136"
+    },
+    {
+      "id": "g8-chop-tam-giac-deu",
+      "grade": 8,
+      "title": "Diện tích và thể tích hình chóp tam giác đều",
+      "document_type": "formula",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "S_{xq}=pd;\\quad V=\\frac13S_{\\text{đáy}}h",
+      "prerequisites": [
+        "g7-dien-tich-tam-giac",
+        "g7-tam-giac-deu-tinh-chat"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g8-b38"
+      ],
+      "source_reference": "https://vietjack.com/toan-8-kn/ly-thuyet-bai-38-hinh-chop-tam-giac-deu.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-8/chop-tam-giac-deu.md",
+      "sha256": "6bfe83258ce46e410798086a04be09fc3b94b1c1f2c7a840ca7c58848fd3e7ab"
+    },
+    {
+      "id": "g8-chop-tu-giac-deu",
+      "grade": 8,
+      "title": "Diện tích và thể tích hình chóp tứ giác đều",
+      "document_type": "formula",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "S_{xq}=2ad;\\quad S_{tp}=2ad+a^2;\\quad V=\\frac13a^2h",
+      "prerequisites": [
+        "g8-chop-tam-giac-deu",
+        "g8-hinh-vuong"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g8-b39"
+      ],
+      "source_reference": "https://vietjack.com/toan-8-kn/ly-thuyet-bai-39-hinh-chop-tu-giac-deu.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-8/chop-tu-giac-deu.md",
+      "sha256": "95cd7bbb96fa12e81f936cda2295bc208f58c17eda89d1517be283ae0e07ca72"
+    },
+    {
+      "id": "g9-ti-so-luong-giac",
+      "grade": 9,
+      "title": "Tỉ số lượng giác của góc nhọn",
+      "document_type": "concept",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "\\sin\\alpha=\\frac{\\mathrm{doi}}{\\mathrm{huyen}};\\ \\cos\\alpha=\\frac{\\mathrm{ke}}{\\mathrm{huyen}};\\ \\tan\\alpha=\\frac{\\mathrm{doi}}{\\mathrm{ke}};\\ \\cot\\alpha=\\frac{\\mathrm{ke}}{\\mathrm{doi}}",
+      "prerequisites": [
+        "g8-pythagore",
+        "g8-dong-dang-tam-giac-vuong"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g9-b11"
+      ],
+      "source_reference": "https://vietjack.com/toan-9-kn/ly-thuyet-bai-11-ti-so-luong-giac-cua-goc-nhon.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-9/ti-so-luong-giac.md",
+      "sha256": "d0f52087cdff258248743b51475c08220a5d0b7a0fb961b1fec288bd2cd397e7"
+    },
+    {
+      "id": "g9-luong-giac-goc-phu",
+      "grade": 9,
+      "title": "Tỉ số lượng giác của hai góc phụ nhau",
+      "document_type": "property",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "\\sin\\alpha=\\cos\\beta;\\quad\\tan\\alpha=\\cot\\beta",
+      "prerequisites": [
+        "g9-ti-so-luong-giac",
+        "g7-tong-goc-tam-giac"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g9-b11"
+      ],
+      "source_reference": "https://vietjack.com/toan-9-kn/ly-thuyet-bai-11-ti-so-luong-giac-cua-goc-nhon.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-9/luong-giac-goc-phu.md",
+      "sha256": "73977bc97929063552099022990034f7347b9aa90e157cc0dd0b5fde20f9db8f"
+    },
+    {
+      "id": "g9-he-thuc-canh-goc",
+      "grade": 9,
+      "title": "Hệ thức giữa cạnh và góc trong tam giác vuông",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "AC=BC\\sin B=AB\\tan B;\\quad AB=BC\\cos B",
+      "prerequisites": [
+        "g9-ti-so-luong-giac"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g9-b12"
+      ],
+      "source_reference": "https://vietjack.com/toan-9-kn/ly-thuyet-bai-12-mot-so-he-thuc-giua-canh-goc-trong-tam-giac.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-9/he-thuc-canh-goc.md",
+      "sha256": "0dde50246962a00ffb03f44755e49ca0c0c5dcd952346d220a169d612ed8c584"
+    },
+    {
+      "id": "g9-duong-tron",
+      "grade": 9,
+      "title": "Đường tròn, hình tròn và vị trí của điểm",
+      "document_type": "concept",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "OM<R;\\quad OM=R;\\quad OM>R",
+      "prerequisites": [
+        "g6-doan-thang-do-dai",
+        "g6-tam-doi-xung"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g9-b13"
+      ],
+      "source_reference": "https://vietjack.com/toan-9-kn/ly-thuyet-bai-13-mo-dau-ve-duong-tron.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-9/duong-tron.md",
+      "sha256": "74ac6f8d3aa3216d362f292573a63b6e0e65e26c62429720e9aa5430e15d02e4"
+    },
+    {
+      "id": "g9-duong-kinh-day",
+      "grade": 9,
+      "title": "Đường kính và dây của đường tròn",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "OM\\perp AB,\\ M\\in AB\\Rightarrow MA=MB;\\quad AB\\le2R",
+      "prerequisites": [
+        "g9-duong-tron",
+        "g7-tam-giac-can",
+        "g6-trung-diem"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g9-b14"
+      ],
+      "source_reference": "https://vietjack.com/toan-9-kn/ly-thuyet-bai-14-cung-va-day-cua-mot-duong-tron.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-9/duong-kinh-day.md",
+      "sha256": "c8fb2b80c020b1efb3dc9e9b9178b1bc02c2b2b829f3636e3b08e4f4e805bdeb"
+    },
+    {
+      "id": "g9-goc-o-tam-cung",
+      "grade": 9,
+      "title": "Góc ở tâm và số đo cung tròn",
+      "document_type": "property",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "m(\\overset{\\frown}{AB}_{\\text{nhỏ}})=\\widehat{AOB};\\quad m(\\overset{\\frown}{AB}_{\\text{lớn}})=360^\\circ-\\widehat{AOB}",
+      "prerequisites": [
+        "g9-duong-tron",
+        "g6-so-do-goc"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g9-b14"
+      ],
+      "source_reference": "https://vietjack.com/toan-9-kn/ly-thuyet-bai-14-cung-va-day-cua-mot-duong-tron.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-9/goc-o-tam-cung.md",
+      "sha256": "c8d453f919d95b5b9e5199ebe09111966dcf0257312f80b92161953ae2b36c25"
+    },
+    {
+      "id": "g9-do-dai-duong-tron-cung",
+      "grade": 9,
+      "title": "Chu vi đường tròn và độ dài cung",
+      "document_type": "formula",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "C=2\\pi R;\\quad l=\\frac{n\\pi R}{180}",
+      "prerequisites": [
+        "g9-goc-o-tam-cung"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g9-b15"
+      ],
+      "source_reference": "https://vietjack.com/toan-9-kn/ly-thuyet-bai-15-do-dai-cua-cung-tron-dien-tich-hinh-quat-tron.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-9/do-dai-duong-tron-cung.md",
+      "sha256": "afe5241a52903f7447859dd5c4bfe0c3a9cb3245886157657e46cc07c283fc4c"
+    },
+    {
+      "id": "g9-dien-tich-hinh-tron-quat",
+      "grade": 9,
+      "title": "Diện tích hình tròn và hình quạt tròn",
+      "document_type": "formula",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "S=\\pi R^2;\\quad S_{\\text{quạt}}=\\frac{n\\pi R^2}{360}=\\frac12lR",
+      "prerequisites": [
+        "g9-do-dai-duong-tron-cung",
+        "g6-chu-vi-dien-tich-chu-nhat"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g9-b15"
+      ],
+      "source_reference": "https://vietjack.com/toan-9-kn/ly-thuyet-bai-15-do-dai-cua-cung-tron-dien-tich-hinh-quat-tron.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-9/dien-tich-hinh-tron-quat.md",
+      "sha256": "25b03052fa2216d7d84b4e3cdee61ba5550fe2bd02b87e219359324a8ffe67e4"
+    },
+    {
+      "id": "g9-hinh-vanh-khuyen",
+      "grade": 9,
+      "title": "Diện tích hình vành khuyên",
+      "document_type": "formula",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "S=\\pi(R^2-r^2)",
+      "prerequisites": [
+        "g9-dien-tich-hinh-tron-quat"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g9-b15"
+      ],
+      "source_reference": "https://vietjack.com/toan-9-kn/ly-thuyet-bai-15-do-dai-cua-cung-tron-dien-tich-hinh-quat-tron.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-9/hinh-vanh-khuyen.md",
+      "sha256": "ff1bccb73dad0639e708f861657f113e0c773157e1e24bf4d4ddc29d1b314d33"
+    },
+    {
+      "id": "g9-vi-tri-duong-thang-duong-tron",
+      "grade": 9,
+      "title": "Vị trí tương đối của đường thẳng và đường tròn",
+      "document_type": "property",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "d<R:\\ 2\\text{ điểm};\\quad d=R:\\ 1\\text{ điểm};\\quad d>R:\\ 0\\text{ điểm}",
+      "prerequisites": [
+        "g9-duong-tron",
+        "g7-vuong-goc-duong-xien"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g9-b16"
+      ],
+      "source_reference": "https://vietjack.com/toan-9-kn/ly-thuyet-bai-16-vi-tri-tuong-doi-cua-duong-thang-va-duong.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-9/vi-tri-duong-thang-duong-tron.md",
+      "sha256": "244a9dbac8b34b4c728cdcaee99b2293b30c7fd1da60eb0572632d77c181ab5e"
+    },
+    {
+      "id": "g9-tiep-tuyen",
+      "grade": 9,
+      "title": "Tính chất và dấu hiệu tiếp tuyến",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "A\\in(O),\\ a\\perp OA\\Longleftrightarrow a\\text{ tiếp xúc }(O)\\text{ tại }A",
+      "prerequisites": [
+        "g9-vi-tri-duong-thang-duong-tron"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g9-b16"
+      ],
+      "source_reference": "https://vietjack.com/toan-9-kn/ly-thuyet-bai-16-vi-tri-tuong-doi-cua-duong-thang-va-duong.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-9/tiep-tuyen.md",
+      "sha256": "da57c122952b773abe25da7284ab350809bac7c005f9ad99e2b0da8a7d9800c9"
+    },
+    {
+      "id": "g9-hai-tiep-tuyen",
+      "grade": 9,
+      "title": "Hai tiếp tuyến cắt nhau",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "PA=PB;\\quad\\widehat{APO}=\\widehat{OPB};\\quad\\widehat{AOP}=\\widehat{POB}",
+      "prerequisites": [
+        "g9-tiep-tuyen",
+        "g7-bang-nhau-tam-giac-vuong"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g9-b16"
+      ],
+      "source_reference": "https://vietjack.com/toan-9-kn/ly-thuyet-bai-16-vi-tri-tuong-doi-cua-duong-thang-va-duong.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-9/hai-tiep-tuyen.md",
+      "sha256": "f91aaf633be24d9b033f7d578e892d01a10dd2da6e647b96739014d45a3a2fe5"
+    },
+    {
+      "id": "g9-hai-duong-tron",
+      "grade": 9,
+      "title": "Vị trí tương đối của hai đường tròn",
+      "document_type": "property",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "|R-r|<d<R+r\\quad\\text{(cắt tại hai điểm)}",
+      "prerequisites": [
+        "g9-duong-tron",
+        "g7-bat-dang-thuc-tam-giac"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g9-b17"
+      ],
+      "source_reference": "https://vietjack.com/toan-9-kn/ly-thuyet-bai-17-vi-tri-tuong-doi-cua-hai-duong-tron.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-9/hai-duong-tron.md",
+      "sha256": "8e98d0398cdc949c684063898eea60c645aa74c8f34eb63d0ee782b0dfa1a8c1"
+    },
+    {
+      "id": "g9-goc-noi-tiep",
+      "grade": 9,
+      "title": "Góc nội tiếp và cung bị chắn",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "\\widehat{ACB}=\\frac12m(\\overset{\\frown}{AB}\\text{ không chứa }C)",
+      "prerequisites": [
+        "g9-goc-o-tam-cung"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g9-b27"
+      ],
+      "source_reference": "https://vietjack.com/toan-9-kn/ly-thuyet-bai-27-goc-noi-tiep.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-9/goc-noi-tiep.md",
+      "sha256": "af4486c9a27176b430fc719c5d3c2e457d0410e0163c3dae6b44ee31db40eaaa"
+    },
+    {
+      "id": "g9-goc-chan-nua-duong-tron",
+      "grade": 9,
+      "title": "Góc nội tiếp chắn nửa đường tròn",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "AB=2R\\Rightarrow\\widehat{ACB}=90^\\circ",
+      "prerequisites": [
+        "g9-goc-noi-tiep",
+        "g9-duong-kinh-day"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g9-b27"
+      ],
+      "source_reference": "https://vietjack.com/toan-9-kn/ly-thuyet-bai-27-goc-noi-tiep.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-9/goc-chan-nua-duong-tron.md",
+      "sha256": "89308513b725e8146187da5a3eef9df59834c80f3b10d893a511491090730d9a"
+    },
+    {
+      "id": "g9-ngoai-tiep-tam-giac",
+      "grade": 9,
+      "title": "Đường tròn ngoại tiếp tam giác",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "OA=OB=OC=R;\\quad R=\\frac12BC\\ \\text{nếu }\\widehat A=90^\\circ",
+      "prerequisites": [
+        "g7-dong-quy-trung-truc",
+        "g8-trung-tuyen-canh-huyen"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g9-b28"
+      ],
+      "source_reference": "https://vietjack.com/toan-9-kn/ly-thuyet-bai-28-duong-tron-ngoai-tiep-va-duong-tron-noi-tiep.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-9/ngoai-tiep-tam-giac.md",
+      "sha256": "2eff71572d5c3c2920daf060e34c32073e375b3bd2c664064a0785f98ab9c858"
+    },
+    {
+      "id": "g9-noi-tiep-tam-giac",
+      "grade": 9,
+      "title": "Đường tròn nội tiếp tam giác",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "d(I,AB)=d(I,BC)=d(I,CA)=r",
+      "prerequisites": [
+        "g7-dong-quy-phan-giac",
+        "g9-tiep-tuyen"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g9-b28"
+      ],
+      "source_reference": "https://vietjack.com/toan-9-kn/ly-thuyet-bai-28-duong-tron-ngoai-tiep-va-duong-tron-noi-tiep.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-9/noi-tiep-tam-giac.md",
+      "sha256": "25db956d4e3625756024938f08a2c185194d07ebc99875c49cef531f400ce35b"
+    },
+    {
+      "id": "g9-tu-giac-noi-tiep",
+      "grade": 9,
+      "title": "Tứ giác nội tiếp và hai góc đối",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "\\widehat A+\\widehat C=180^\\circ;\\quad\\widehat B+\\widehat D=180^\\circ",
+      "prerequisites": [
+        "g9-goc-noi-tiep",
+        "g8-tong-goc-tu-giac"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g9-b29"
+      ],
+      "source_reference": "https://vietjack.com/toan-9-kn/ly-thuyet-bai-29-tu-giac-noi-tiep.jsp",
+      "compiled_on": "2026-11-09",
+      "curriculum_note": "Định lý thuận là nội dung chính; chiều đảo là kiến thức chứng minh bổ sung.",
+      "file": "markdown/lop-9/tu-giac-noi-tiep.md",
+      "sha256": "89a58114633b139e19922a726de3c62fb0a34e0d6391d6e1bbbd328f8260d213"
+    },
+    {
+      "id": "g9-ngoai-tiep-chu-nhat-vuong",
+      "grade": 9,
+      "title": "Đường tròn ngoại tiếp hình chữ nhật và hình vuông",
+      "document_type": "theorem",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "R=\\frac12\\sqrt{a^2+b^2};\\quad R_{\\text{vuông}}=\\frac{a\\sqrt2}{2}",
+      "prerequisites": [
+        "g8-hinh-chu-nhat",
+        "g8-pythagore",
+        "g9-tu-giac-noi-tiep"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g9-b29"
+      ],
+      "source_reference": "https://vietjack.com/toan-9-kn/ly-thuyet-bai-29-tu-giac-noi-tiep.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-9/ngoai-tiep-chu-nhat-vuong.md",
+      "sha256": "e870096595d18ce572551b347f66c6cd8cacb906bf7a2063754dfc66567b2ea5"
+    },
+    {
+      "id": "g9-da-giac-deu",
+      "grade": 9,
+      "title": "Đa giác đều và góc ở tâm",
+      "document_type": "property",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "\\theta=\\frac{360^\\circ}{n};\\quad\\alpha=\\frac{(n-2)180^\\circ}{n}",
+      "prerequisites": [
+        "g9-goc-o-tam-cung",
+        "g7-tong-goc-tam-giac",
+        "g6-luc-giac-deu"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g9-b30"
+      ],
+      "source_reference": "https://vietjack.com/toan-9-kn/ly-thuyet-bai-30-da-giac-deu.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-9/da-giac-deu.md",
+      "sha256": "2c189dfb4f691fd21f19920c4434b2ca55f500571c7beb89c457164814ea03df"
+    },
+    {
+      "id": "g9-phep-quay",
+      "grade": 9,
+      "title": "Phép quay và đối xứng quay của đa giác đều",
+      "document_type": "property",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "\\theta=k\\frac{360^\\circ}{n}\\quad(k\\in\\mathbb Z)",
+      "prerequisites": [
+        "g9-da-giac-deu",
+        "g6-tam-doi-xung"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g9-b30"
+      ],
+      "source_reference": "https://vietjack.com/toan-9-kn/ly-thuyet-bai-30-da-giac-deu.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-9/phep-quay.md",
+      "sha256": "22984cf742123ecdce9e8d857ae06706b9beddfdf18d8c9f69c90465a51c4a11"
+    },
+    {
+      "id": "g9-hinh-tru",
+      "grade": 9,
+      "title": "Diện tích và thể tích hình trụ",
+      "document_type": "formula",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "S_{xq}=2\\pi rh;\\quad S_{tp}=2\\pi rh+2\\pi r^2;\\quad V=\\pi r^2h",
+      "prerequisites": [
+        "g9-dien-tich-hinh-tron-quat",
+        "g7-hinh-hop-chu-nhat"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g9-b31"
+      ],
+      "source_reference": "https://vietjack.com/toan-9-kn/ly-thuyet-bai-31-hinh-tru-va-hinh-tron.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-9/hinh-tru.md",
+      "sha256": "f04c28324181f2395224ceaf7089b95a5d18470ce3216ff1931134b679b55cde"
+    },
+    {
+      "id": "g9-hinh-non",
+      "grade": 9,
+      "title": "Diện tích và thể tích hình nón",
+      "document_type": "formula",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "l^2=r^2+h^2;\\quad S_{xq}=\\pi rl;\\quad S_{tp}=\\pi rl+\\pi r^2;\\quad V=\\frac13\\pi r^2h",
+      "prerequisites": [
+        "g8-pythagore",
+        "g9-hinh-tru"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g9-b31"
+      ],
+      "source_reference": "https://vietjack.com/toan-9-kn/ly-thuyet-bai-31-hinh-tru-va-hinh-tron.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-9/hinh-non.md",
+      "sha256": "a4705ef8713859d14e454e5273d5f9573d426394d8d9ee1cc88155e85a324a26"
+    },
+    {
+      "id": "g9-hinh-cau",
+      "grade": 9,
+      "title": "Diện tích mặt cầu và thể tích hình cầu",
+      "document_type": "formula",
+      "scope": "kien-thuc-cot-loi-va-he-qua-gan",
+      "formula_latex": "S=4\\pi r^2;\\quad V=\\frac43\\pi r^3",
+      "prerequisites": [
+        "g9-dien-tich-hinh-tron-quat",
+        "g7-hinh-lap-phuong"
+      ],
+      "language": "vi",
+      "subject": "hinh-hoc",
+      "curriculum_reference": "CTGDPT 2018; xếp chủ đề theo học liệu Kết nối tri thức công khai",
+      "review_status": "cho-giao-vien-duyet",
+      "prerequisite_origin": "de-xuat-bien-soan-khong-phai-trich-xuat-tu-dong",
+      "source_ids": [
+        "vj-g9-b32"
+      ],
+      "source_reference": "https://vietjack.com/toan-9-kn/ly-thuyet-bai-32-hinh-cau.jsp",
+      "compiled_on": "2026-11-09",
+      "file": "markdown/lop-9/hinh-cau.md",
+      "sha256": "a005048c557771cf660a552187b15ec9b97ec93b952e7eab6a6c7785ebf4214e"
+    }
+  ]
+}

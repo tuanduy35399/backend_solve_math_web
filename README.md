@@ -112,3 +112,26 @@ uv pip install --python .venv/bin/python -r requirements-test.txt
 `verify_stack.py` tạo SQLite/tài khoản tạm, chạy Django:18000 + FastAPI:18001 + Vite:5180, vô hiệu hóa khóa model trong các tiến trình thử nghiệm và dọn sau khi xong. Không dùng dữ liệu học sinh thật hoặc gọi dịch vụ AI trả phí. Cần frontend nằm cạnh repo này; đặt `MINDGEO_FRONTEND` nếu đường dẫn khác. Chrome được tự tìm, có thể đặt `CHROME_PATH`.
 
 Frontend: `npm test`, `npm run build`, `npm run test:e2e -- --project=demo` cho hồi quy bản mẫu. Chế độ live được kiểm tra qua script stack bên trên. Tài liệu của agent độc lập nằm ở `docs/testing/` và phân biệt kết quả thật, mock và các bước cần hạ tầng bên ngoài.
+
+## Bộ học liệu hình học lớp 6–9
+
+Đã chuẩn bị 88 bài Markdown trong `knowledge/markdown/`, đối chiếu 55 nguồn công khai và có 151 quan hệ tiên quyết đề xuất. Xem [mục lục](knowledge/INDEX.md), [nguồn và cách sử dụng](knowledge/README.md). Corpus đã nhập Django/Chroma/Neo4j và giữ trạng thái nội dung chờ giáo viên duyệt. Kiểm tra bằng `python3 scripts/validate_geometry_corpus.py`.
+
+## Hoàn thiện tích hợp ngày 09/11/2026
+
+- [Đối chiếu SRS](../solve_math_vlm/frontend/SRS-COVERAGE.md), [báo cáo QA độc lập](docs/testing/NGHIEM_THU_WEB_TICH_HOP.md).
+- [Dựng chỉ mục và đồ thị](knowledge/OFFLINE_BUILD.md): có thêm pipeline LLM SchemaLLMPathExtractor dùng schema toán học, cache/resume, bằng chứng nguồn và giới hạn gọi riêng. Chạy `manage.py extract_geometry_graph --dry-run` để xem kế hoạch; `--rpm 10 --max-calls 100` để thực hiện. Không trừ hạn mức sinh bài/quiz của web.
+- Giáo viên có thể duyệt nội dung. Sửa nội dung sẽ bỏ nhãn đã duyệt; chỉ mục/đồ thị không khớp fingerprint bị báo cần đồng bộ/trích xuất lại. Không tự gửi dữ liệu cũ để sinh bài.
+- Admin có nút kiểm tra kết nối thật, không gọi sinh nội dung để giả làm health check.
+- `scripts/verify_live_ai.py` kiểm tra RAG và graph thật với tài khoản/SQLite tạm; `--generate --research` gọi model/Tavily thật cho nội dung học thuật và lưu bằng chứng trong `data/`.
+- [Hướng dẫn phục vụ checkpoint Qwen](docs/QWEN_DEPLOYMENT.md). Tác giả chưa có GPU, nên không tải/chạy model 9 GB trên laptop hoặc thay chat bằng Gemini.
+- Giữ hạn mức ứng dụng **100 lượt sinh học liệu/ngày cho cả hệ thống**; không phải quota của Gemini và không tính offline indexing.
+
+## Hướng dẫn cho người dùng
+
+- [User guide: luồng hoạt động và thao tác theo vai trò](docs/USER_GUIDE.md).
+- [9 kịch bản sử dụng/trình diễn](docs/KICH_BAN_SU_DUNG.md).
+- Bản đồ và tủ kiến thức đã nhóm theo lớp, mặc định theo hồ sơ học sinh. Bỏ cạnh mẫu ngược lớp sides (9) → pythagoras (8); hiện có 154 cạnh tiên quyết. Không đổi corpus 151 cạnh hoặc đồ thị LLM.
+- Camera chỉ hiển thị trên giao diện di động cảm ứng; desktop dùng tải ảnh/kéo thả.
+
+- [Kiểm thử giao diện: graph, Markdown, camera và sidebar](docs/testing/KIEM_THU_GIAO_DIEN_HOC_TAP.md).

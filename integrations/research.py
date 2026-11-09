@@ -9,8 +9,8 @@ from .upstream import ROOT
 
 def create_report(material):
     from ai_service.providers import ProviderUnavailable
-    if not all(os.getenv(k) for k in ['OPENAI_API_KEY','OPENAI_MODEL','TAVILY_API_KEY']):
-        raise ProviderUnavailable('Cần OPENAI_API_KEY, OPENAI_MODEL và TAVILY_API_KEY cho agent nghiên cứu.')
+    if not all(os.getenv(k) for k in ['OPENAI_API_KEY','OPENAI_BASE_URL','OPENAI_MODEL','TAVILY_API_KEY']):
+        raise ProviderUnavailable('Cần OPENAI_API_KEY, OPENAI_BASE_URL, OPENAI_MODEL và TAVILY_API_KEY cho agent nghiên cứu.')
     source=ROOT/'ai_agent_game_maker_plan'
     if not (source/'tools.py').exists(): raise ProviderUnavailable('Chưa clone repo agent. Chạy scripts/clone_sources.py.')
     with tempfile.TemporaryDirectory(prefix='mindgeo-report-') as temp:

@@ -1,0 +1,1592 @@
+{
+  "description": "Đề xuất đồ thị từ nội dung biên soạn; chưa nhập vào Neo4j, chưa qua duyệt giáo viên.",
+  "nodes": [
+    {
+      "id": "g6-diem-duong-thang",
+      "title": "Điểm, đường thẳng và ba điểm thẳng hàng",
+      "grade": 6,
+      "type": "concept"
+    },
+    {
+      "id": "g6-diem-nam-giua",
+      "title": "Điểm nằm giữa và phép cộng độ dài đoạn thẳng",
+      "grade": 6,
+      "type": "property"
+    },
+    {
+      "id": "g6-tia-hai-tia-doi",
+      "title": "Tia và hai tia đối nhau",
+      "grade": 6,
+      "type": "concept"
+    },
+    {
+      "id": "g6-doan-thang-do-dai",
+      "title": "Đoạn thẳng và độ dài",
+      "grade": 6,
+      "type": "concept"
+    },
+    {
+      "id": "g6-trung-diem",
+      "title": "Trung điểm của đoạn thẳng",
+      "grade": 6,
+      "type": "concept"
+    },
+    {
+      "id": "g6-goc",
+      "title": "Góc, đỉnh và hai cạnh của góc",
+      "grade": 6,
+      "type": "concept"
+    },
+    {
+      "id": "g6-so-do-goc",
+      "title": "Số đo và phân loại góc",
+      "grade": 6,
+      "type": "property"
+    },
+    {
+      "id": "g6-tam-giac-deu-truc-quan",
+      "title": "Nhận biết trực quan tam giác đều",
+      "grade": 6,
+      "type": "concept"
+    },
+    {
+      "id": "g6-hinh-vuong-truc-quan",
+      "title": "Nhận biết trực quan hình vuông",
+      "grade": 6,
+      "type": "concept"
+    },
+    {
+      "id": "g6-luc-giac-deu",
+      "title": "Nhận biết trực quan hình lục giác đều",
+      "grade": 6,
+      "type": "concept"
+    },
+    {
+      "id": "g6-nhan-biet-tu-giac",
+      "title": "Nhận biết hình chữ nhật, bình hành, thoi và thang cân",
+      "grade": 6,
+      "type": "concept"
+    },
+    {
+      "id": "g6-chu-vi-dien-tich-chu-nhat",
+      "title": "Chu vi và diện tích hình chữ nhật",
+      "grade": 6,
+      "type": "formula"
+    },
+    {
+      "id": "g6-dien-tich-binh-hanh",
+      "title": "Chu vi và diện tích hình bình hành",
+      "grade": 6,
+      "type": "formula"
+    },
+    {
+      "id": "g6-dien-tich-hinh-thoi",
+      "title": "Chu vi và diện tích hình thoi",
+      "grade": 6,
+      "type": "formula"
+    },
+    {
+      "id": "g6-dien-tich-hinh-thang",
+      "title": "Chu vi và diện tích hình thang",
+      "grade": 6,
+      "type": "formula"
+    },
+    {
+      "id": "g6-truc-doi-xung",
+      "title": "Trục đối xứng của hình phẳng",
+      "grade": 6,
+      "type": "concept"
+    },
+    {
+      "id": "g6-tam-doi-xung",
+      "title": "Tâm đối xứng của hình phẳng",
+      "grade": 6,
+      "type": "concept"
+    },
+    {
+      "id": "g7-goc-doi-dinh-ke-bu",
+      "title": "Hai góc đối đỉnh và hai góc kề bù",
+      "grade": 7,
+      "type": "theorem"
+    },
+    {
+      "id": "g7-tia-phan-giac",
+      "title": "Tia phân giác của một góc",
+      "grade": 7,
+      "type": "concept"
+    },
+    {
+      "id": "g7-dau-hieu-song-song",
+      "title": "Dấu hiệu nhận biết hai đường thẳng song song",
+      "grade": 7,
+      "type": "theorem"
+    },
+    {
+      "id": "g7-tien-de-tinh-chat-song-song",
+      "title": "Tiên đề Euclid và tính chất đường thẳng song song",
+      "grade": 7,
+      "type": "theorem"
+    },
+    {
+      "id": "g7-gia-thiet-ket-luan",
+      "title": "Giả thiết, kết luận và chứng minh định lý",
+      "grade": 7,
+      "type": "concept"
+    },
+    {
+      "id": "g7-tong-goc-tam-giac",
+      "title": "Tổng ba góc của một tam giác",
+      "grade": 7,
+      "type": "theorem"
+    },
+    {
+      "id": "g7-goc-ngoai-tam-giac",
+      "title": "Góc ngoài của tam giác",
+      "grade": 7,
+      "type": "theorem"
+    },
+    {
+      "id": "g7-bang-nhau-ccc",
+      "title": "Tam giác bằng nhau theo cạnh cạnh cạnh",
+      "grade": 7,
+      "type": "theorem"
+    },
+    {
+      "id": "g7-bang-nhau-cgc",
+      "title": "Tam giác bằng nhau theo cạnh góc cạnh",
+      "grade": 7,
+      "type": "theorem"
+    },
+    {
+      "id": "g7-bang-nhau-gcg",
+      "title": "Tam giác bằng nhau theo góc cạnh góc",
+      "grade": 7,
+      "type": "theorem"
+    },
+    {
+      "id": "g7-bang-nhau-tam-giac-vuong",
+      "title": "Các trường hợp bằng nhau của tam giác vuông",
+      "grade": 7,
+      "type": "theorem"
+    },
+    {
+      "id": "g7-tam-giac-can",
+      "title": "Tính chất và dấu hiệu tam giác cân",
+      "grade": 7,
+      "type": "theorem"
+    },
+    {
+      "id": "g7-tam-giac-deu-tinh-chat",
+      "title": "Tam giác đều và dấu hiệu nhận biết",
+      "grade": 7,
+      "type": "theorem"
+    },
+    {
+      "id": "g7-duong-trung-truc",
+      "title": "Đường trung trực và tính chất cách đều",
+      "grade": 7,
+      "type": "theorem"
+    },
+    {
+      "id": "g7-quan-he-goc-canh",
+      "title": "Quan hệ giữa góc và cạnh đối diện trong tam giác",
+      "grade": 7,
+      "type": "theorem"
+    },
+    {
+      "id": "g7-vuong-goc-duong-xien",
+      "title": "Đường vuông góc là khoảng cách ngắn nhất tới đường thẳng",
+      "grade": 7,
+      "type": "theorem"
+    },
+    {
+      "id": "g7-bat-dang-thuc-tam-giac",
+      "title": "Bất đẳng thức tam giác",
+      "grade": 7,
+      "type": "theorem"
+    },
+    {
+      "id": "g7-trong-tam",
+      "title": "Ba trung tuyến và trọng tâm",
+      "grade": 7,
+      "type": "theorem"
+    },
+    {
+      "id": "g7-dong-quy-phan-giac",
+      "title": "Ba phân giác trong và tâm đường tròn nội tiếp",
+      "grade": 7,
+      "type": "theorem"
+    },
+    {
+      "id": "g7-dong-quy-trung-truc",
+      "title": "Ba đường trung trực và tâm đường tròn ngoại tiếp",
+      "grade": 7,
+      "type": "theorem"
+    },
+    {
+      "id": "g7-truc-tam",
+      "title": "Ba đường cao và trực tâm",
+      "grade": 7,
+      "type": "theorem"
+    },
+    {
+      "id": "g7-hinh-hop-chu-nhat",
+      "title": "Diện tích xung quanh và thể tích hình hộp chữ nhật",
+      "grade": 7,
+      "type": "formula"
+    },
+    {
+      "id": "g7-hinh-lap-phuong",
+      "title": "Diện tích và thể tích hình lập phương",
+      "grade": 7,
+      "type": "formula"
+    },
+    {
+      "id": "g7-lang-tru-dung",
+      "title": "Diện tích xung quanh và thể tích lăng trụ đứng",
+      "grade": 7,
+      "type": "formula"
+    },
+    {
+      "id": "g7-dien-tich-tam-giac",
+      "title": "Ôn tập diện tích tam giác để tính đáy lăng trụ",
+      "grade": 7,
+      "type": "formula"
+    },
+    {
+      "id": "g8-tong-goc-tu-giac",
+      "title": "Tổng các góc của một tứ giác",
+      "grade": 8,
+      "type": "theorem"
+    },
+    {
+      "id": "g8-hinh-thang-can",
+      "title": "Tính chất và dấu hiệu hình thang cân",
+      "grade": 8,
+      "type": "theorem"
+    },
+    {
+      "id": "g8-binh-hanh-tinh-chat",
+      "title": "Tính chất hình bình hành",
+      "grade": 8,
+      "type": "theorem"
+    },
+    {
+      "id": "g8-binh-hanh-nhan-biet",
+      "title": "Các dấu hiệu nhận biết hình bình hành",
+      "grade": 8,
+      "type": "theorem"
+    },
+    {
+      "id": "g8-hinh-chu-nhat",
+      "title": "Tính chất và dấu hiệu hình chữ nhật",
+      "grade": 8,
+      "type": "theorem"
+    },
+    {
+      "id": "g8-trung-tuyen-canh-huyen",
+      "title": "Trung tuyến ứng với cạnh huyền và định lý đảo",
+      "grade": 8,
+      "type": "theorem"
+    },
+    {
+      "id": "g8-hinh-thoi",
+      "title": "Tính chất và dấu hiệu hình thoi",
+      "grade": 8,
+      "type": "theorem"
+    },
+    {
+      "id": "g8-hinh-vuong",
+      "title": "Tính chất và dấu hiệu hình vuông",
+      "grade": 8,
+      "type": "theorem"
+    },
+    {
+      "id": "g8-thales-thuan",
+      "title": "Định lý Thalès trong tam giác",
+      "grade": 8,
+      "type": "theorem"
+    },
+    {
+      "id": "g8-thales-dao",
+      "title": "Định lý Thalès đảo",
+      "grade": 8,
+      "type": "theorem"
+    },
+    {
+      "id": "g8-duong-trung-binh",
+      "title": "Đường trung bình của tam giác",
+      "grade": 8,
+      "type": "theorem"
+    },
+    {
+      "id": "g8-phan-giac-tam-giac",
+      "title": "Định lý phân giác trong của tam giác",
+      "grade": 8,
+      "type": "theorem"
+    },
+    {
+      "id": "g8-dong-dang-khai-niem",
+      "title": "Hai tam giác đồng dạng và tỉ số đồng dạng",
+      "grade": 8,
+      "type": "concept"
+    },
+    {
+      "id": "g8-dong-dang-gg",
+      "title": "Đồng dạng theo góc góc",
+      "grade": 8,
+      "type": "theorem"
+    },
+    {
+      "id": "g8-dong-dang-ccc",
+      "title": "Đồng dạng theo cạnh cạnh cạnh",
+      "grade": 8,
+      "type": "theorem"
+    },
+    {
+      "id": "g8-dong-dang-cgc",
+      "title": "Đồng dạng theo cạnh góc cạnh",
+      "grade": 8,
+      "type": "theorem"
+    },
+    {
+      "id": "g8-pythagore",
+      "title": "Định lý Pythagore",
+      "grade": 8,
+      "type": "theorem"
+    },
+    {
+      "id": "g8-pythagore-dao",
+      "title": "Định lý Pythagore đảo",
+      "grade": 8,
+      "type": "theorem"
+    },
+    {
+      "id": "g8-dong-dang-tam-giac-vuong",
+      "title": "Các trường hợp đồng dạng của tam giác vuông",
+      "grade": 8,
+      "type": "theorem"
+    },
+    {
+      "id": "g8-hinh-dong-dang",
+      "title": "Hình đồng dạng và thay đổi kích thước",
+      "grade": 8,
+      "type": "property"
+    },
+    {
+      "id": "g8-chop-tam-giac-deu",
+      "title": "Diện tích và thể tích hình chóp tam giác đều",
+      "grade": 8,
+      "type": "formula"
+    },
+    {
+      "id": "g8-chop-tu-giac-deu",
+      "title": "Diện tích và thể tích hình chóp tứ giác đều",
+      "grade": 8,
+      "type": "formula"
+    },
+    {
+      "id": "g9-ti-so-luong-giac",
+      "title": "Tỉ số lượng giác của góc nhọn",
+      "grade": 9,
+      "type": "concept"
+    },
+    {
+      "id": "g9-luong-giac-goc-phu",
+      "title": "Tỉ số lượng giác của hai góc phụ nhau",
+      "grade": 9,
+      "type": "property"
+    },
+    {
+      "id": "g9-he-thuc-canh-goc",
+      "title": "Hệ thức giữa cạnh và góc trong tam giác vuông",
+      "grade": 9,
+      "type": "theorem"
+    },
+    {
+      "id": "g9-duong-tron",
+      "title": "Đường tròn, hình tròn và vị trí của điểm",
+      "grade": 9,
+      "type": "concept"
+    },
+    {
+      "id": "g9-duong-kinh-day",
+      "title": "Đường kính và dây của đường tròn",
+      "grade": 9,
+      "type": "theorem"
+    },
+    {
+      "id": "g9-goc-o-tam-cung",
+      "title": "Góc ở tâm và số đo cung tròn",
+      "grade": 9,
+      "type": "property"
+    },
+    {
+      "id": "g9-do-dai-duong-tron-cung",
+      "title": "Chu vi đường tròn và độ dài cung",
+      "grade": 9,
+      "type": "formula"
+    },
+    {
+      "id": "g9-dien-tich-hinh-tron-quat",
+      "title": "Diện tích hình tròn và hình quạt tròn",
+      "grade": 9,
+      "type": "formula"
+    },
+    {
+      "id": "g9-hinh-vanh-khuyen",
+      "title": "Diện tích hình vành khuyên",
+      "grade": 9,
+      "type": "formula"
+    },
+    {
+      "id": "g9-vi-tri-duong-thang-duong-tron",
+      "title": "Vị trí tương đối của đường thẳng và đường tròn",
+      "grade": 9,
+      "type": "property"
+    },
+    {
+      "id": "g9-tiep-tuyen",
+      "title": "Tính chất và dấu hiệu tiếp tuyến",
+      "grade": 9,
+      "type": "theorem"
+    },
+    {
+      "id": "g9-hai-tiep-tuyen",
+      "title": "Hai tiếp tuyến cắt nhau",
+      "grade": 9,
+      "type": "theorem"
+    },
+    {
+      "id": "g9-hai-duong-tron",
+      "title": "Vị trí tương đối của hai đường tròn",
+      "grade": 9,
+      "type": "property"
+    },
+    {
+      "id": "g9-goc-noi-tiep",
+      "title": "Góc nội tiếp và cung bị chắn",
+      "grade": 9,
+      "type": "theorem"
+    },
+    {
+      "id": "g9-goc-chan-nua-duong-tron",
+      "title": "Góc nội tiếp chắn nửa đường tròn",
+      "grade": 9,
+      "type": "theorem"
+    },
+    {
+      "id": "g9-ngoai-tiep-tam-giac",
+      "title": "Đường tròn ngoại tiếp tam giác",
+      "grade": 9,
+      "type": "theorem"
+    },
+    {
+      "id": "g9-noi-tiep-tam-giac",
+      "title": "Đường tròn nội tiếp tam giác",
+      "grade": 9,
+      "type": "theorem"
+    },
+    {
+      "id": "g9-tu-giac-noi-tiep",
+      "title": "Tứ giác nội tiếp và hai góc đối",
+      "grade": 9,
+      "type": "theorem"
+    },
+    {
+      "id": "g9-ngoai-tiep-chu-nhat-vuong",
+      "title": "Đường tròn ngoại tiếp hình chữ nhật và hình vuông",
+      "grade": 9,
+      "type": "theorem"
+    },
+    {
+      "id": "g9-da-giac-deu",
+      "title": "Đa giác đều và góc ở tâm",
+      "grade": 9,
+      "type": "property"
+    },
+    {
+      "id": "g9-phep-quay",
+      "title": "Phép quay và đối xứng quay của đa giác đều",
+      "grade": 9,
+      "type": "property"
+    },
+    {
+      "id": "g9-hinh-tru",
+      "title": "Diện tích và thể tích hình trụ",
+      "grade": 9,
+      "type": "formula"
+    },
+    {
+      "id": "g9-hinh-non",
+      "title": "Diện tích và thể tích hình nón",
+      "grade": 9,
+      "type": "formula"
+    },
+    {
+      "id": "g9-hinh-cau",
+      "title": "Diện tích mặt cầu và thể tích hình cầu",
+      "grade": 9,
+      "type": "formula"
+    }
+  ],
+  "edges": [
+    {
+      "source": "g6-diem-duong-thang",
+      "target": "g6-diem-nam-giua",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-diem-nam-giua",
+      "target": "g6-tia-hai-tia-doi",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-diem-duong-thang",
+      "target": "g6-doan-thang-do-dai",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-diem-nam-giua",
+      "target": "g6-trung-diem",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-doan-thang-do-dai",
+      "target": "g6-trung-diem",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-tia-hai-tia-doi",
+      "target": "g6-goc",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-goc",
+      "target": "g6-so-do-goc",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-doan-thang-do-dai",
+      "target": "g6-tam-giac-deu-truc-quan",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-so-do-goc",
+      "target": "g6-hinh-vuong-truc-quan",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-doan-thang-do-dai",
+      "target": "g6-hinh-vuong-truc-quan",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-tam-giac-deu-truc-quan",
+      "target": "g6-luc-giac-deu",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-hinh-vuong-truc-quan",
+      "target": "g6-nhan-biet-tu-giac",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-so-do-goc",
+      "target": "g6-nhan-biet-tu-giac",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-nhan-biet-tu-giac",
+      "target": "g6-chu-vi-dien-tich-chu-nhat",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-nhan-biet-tu-giac",
+      "target": "g6-dien-tich-binh-hanh",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-chu-vi-dien-tich-chu-nhat",
+      "target": "g6-dien-tich-binh-hanh",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-nhan-biet-tu-giac",
+      "target": "g6-dien-tich-hinh-thoi",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-nhan-biet-tu-giac",
+      "target": "g6-dien-tich-hinh-thang",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-trung-diem",
+      "target": "g6-truc-doi-xung",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-nhan-biet-tu-giac",
+      "target": "g6-truc-doi-xung",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-trung-diem",
+      "target": "g6-tam-doi-xung",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-truc-doi-xung",
+      "target": "g6-tam-doi-xung",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-so-do-goc",
+      "target": "g7-goc-doi-dinh-ke-bu",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-tia-hai-tia-doi",
+      "target": "g7-goc-doi-dinh-ke-bu",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-goc",
+      "target": "g7-tia-phan-giac",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-so-do-goc",
+      "target": "g7-tia-phan-giac",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-goc-doi-dinh-ke-bu",
+      "target": "g7-dau-hieu-song-song",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-dau-hieu-song-song",
+      "target": "g7-tien-de-tinh-chat-song-song",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-goc-doi-dinh-ke-bu",
+      "target": "g7-gia-thiet-ket-luan",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-tien-de-tinh-chat-song-song",
+      "target": "g7-tong-goc-tam-giac",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-tong-goc-tam-giac",
+      "target": "g7-goc-ngoai-tam-giac",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-goc-doi-dinh-ke-bu",
+      "target": "g7-goc-ngoai-tam-giac",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-doan-thang-do-dai",
+      "target": "g7-bang-nhau-ccc",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-gia-thiet-ket-luan",
+      "target": "g7-bang-nhau-ccc",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-bang-nhau-ccc",
+      "target": "g7-bang-nhau-cgc",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-goc",
+      "target": "g7-bang-nhau-cgc",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-tong-goc-tam-giac",
+      "target": "g7-bang-nhau-gcg",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-bang-nhau-ccc",
+      "target": "g7-bang-nhau-gcg",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-bang-nhau-cgc",
+      "target": "g7-bang-nhau-tam-giac-vuong",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-bang-nhau-gcg",
+      "target": "g7-bang-nhau-tam-giac-vuong",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-tong-goc-tam-giac",
+      "target": "g7-tam-giac-can",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-bang-nhau-cgc",
+      "target": "g7-tam-giac-can",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-tam-giac-can",
+      "target": "g7-tam-giac-deu-tinh-chat",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-tam-giac-deu-truc-quan",
+      "target": "g7-tam-giac-deu-tinh-chat",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-trung-diem",
+      "target": "g7-duong-trung-truc",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-bang-nhau-ccc",
+      "target": "g7-duong-trung-truc",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-tam-giac-can",
+      "target": "g7-quan-he-goc-canh",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-so-do-goc",
+      "target": "g7-vuong-goc-duong-xien",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-quan-he-goc-canh",
+      "target": "g7-vuong-goc-duong-xien",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-quan-he-goc-canh",
+      "target": "g7-bat-dang-thuc-tam-giac",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-trung-diem",
+      "target": "g7-trong-tam",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-bang-nhau-ccc",
+      "target": "g7-trong-tam",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-tia-phan-giac",
+      "target": "g7-dong-quy-phan-giac",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-vuong-goc-duong-xien",
+      "target": "g7-dong-quy-phan-giac",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-duong-trung-truc",
+      "target": "g7-dong-quy-trung-truc",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-tien-de-tinh-chat-song-song",
+      "target": "g7-truc-tam",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-so-do-goc",
+      "target": "g7-truc-tam",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-chu-vi-dien-tich-chu-nhat",
+      "target": "g7-hinh-hop-chu-nhat",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-hinh-vuong-truc-quan",
+      "target": "g7-hinh-lap-phuong",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-hinh-hop-chu-nhat",
+      "target": "g7-hinh-lap-phuong",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-hinh-hop-chu-nhat",
+      "target": "g7-lang-tru-dung",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-dien-tich-tam-giac",
+      "target": "g7-lang-tru-dung",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-chu-vi-dien-tich-chu-nhat",
+      "target": "g7-dien-tich-tam-giac",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-vuong-goc-duong-xien",
+      "target": "g7-dien-tich-tam-giac",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-tong-goc-tam-giac",
+      "target": "g8-tong-goc-tu-giac",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g8-tong-goc-tu-giac",
+      "target": "g8-hinh-thang-can",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-tien-de-tinh-chat-song-song",
+      "target": "g8-hinh-thang-can",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-tien-de-tinh-chat-song-song",
+      "target": "g8-binh-hanh-tinh-chat",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-bang-nhau-gcg",
+      "target": "g8-binh-hanh-tinh-chat",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g8-binh-hanh-tinh-chat",
+      "target": "g8-binh-hanh-nhan-biet",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g8-binh-hanh-tinh-chat",
+      "target": "g8-hinh-chu-nhat",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g8-binh-hanh-nhan-biet",
+      "target": "g8-hinh-chu-nhat",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g8-hinh-chu-nhat",
+      "target": "g8-trung-tuyen-canh-huyen",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-trung-diem",
+      "target": "g8-trung-tuyen-canh-huyen",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g8-binh-hanh-tinh-chat",
+      "target": "g8-hinh-thoi",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-tia-phan-giac",
+      "target": "g8-hinh-thoi",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g8-hinh-chu-nhat",
+      "target": "g8-hinh-vuong",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g8-hinh-thoi",
+      "target": "g8-hinh-vuong",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-tien-de-tinh-chat-song-song",
+      "target": "g8-thales-thuan",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-gia-thiet-ket-luan",
+      "target": "g8-thales-thuan",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g8-thales-thuan",
+      "target": "g8-thales-dao",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-trung-diem",
+      "target": "g8-duong-trung-binh",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g8-thales-thuan",
+      "target": "g8-duong-trung-binh",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g8-thales-dao",
+      "target": "g8-duong-trung-binh",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-tia-phan-giac",
+      "target": "g8-phan-giac-tam-giac",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g8-thales-thuan",
+      "target": "g8-phan-giac-tam-giac",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-bang-nhau-ccc",
+      "target": "g8-dong-dang-khai-niem",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g8-thales-thuan",
+      "target": "g8-dong-dang-khai-niem",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g8-dong-dang-khai-niem",
+      "target": "g8-dong-dang-gg",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-tong-goc-tam-giac",
+      "target": "g8-dong-dang-gg",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g8-dong-dang-khai-niem",
+      "target": "g8-dong-dang-ccc",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g8-dong-dang-khai-niem",
+      "target": "g8-dong-dang-cgc",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-bang-nhau-cgc",
+      "target": "g8-dong-dang-cgc",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-tong-goc-tam-giac",
+      "target": "g8-pythagore",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-hinh-vuong-truc-quan",
+      "target": "g8-pythagore",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g8-pythagore",
+      "target": "g8-pythagore-dao",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-bat-dang-thuc-tam-giac",
+      "target": "g8-pythagore-dao",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g8-dong-dang-gg",
+      "target": "g8-dong-dang-tam-giac-vuong",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g8-dong-dang-cgc",
+      "target": "g8-dong-dang-tam-giac-vuong",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g8-pythagore",
+      "target": "g8-dong-dang-tam-giac-vuong",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g8-dong-dang-khai-niem",
+      "target": "g8-hinh-dong-dang",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-dien-tich-tam-giac",
+      "target": "g8-chop-tam-giac-deu",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-tam-giac-deu-tinh-chat",
+      "target": "g8-chop-tam-giac-deu",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g8-chop-tam-giac-deu",
+      "target": "g8-chop-tu-giac-deu",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g8-hinh-vuong",
+      "target": "g8-chop-tu-giac-deu",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g8-pythagore",
+      "target": "g9-ti-so-luong-giac",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g8-dong-dang-tam-giac-vuong",
+      "target": "g9-ti-so-luong-giac",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g9-ti-so-luong-giac",
+      "target": "g9-luong-giac-goc-phu",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-tong-goc-tam-giac",
+      "target": "g9-luong-giac-goc-phu",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g9-ti-so-luong-giac",
+      "target": "g9-he-thuc-canh-goc",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-doan-thang-do-dai",
+      "target": "g9-duong-tron",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-tam-doi-xung",
+      "target": "g9-duong-tron",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g9-duong-tron",
+      "target": "g9-duong-kinh-day",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-tam-giac-can",
+      "target": "g9-duong-kinh-day",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-trung-diem",
+      "target": "g9-duong-kinh-day",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g9-duong-tron",
+      "target": "g9-goc-o-tam-cung",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-so-do-goc",
+      "target": "g9-goc-o-tam-cung",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g9-goc-o-tam-cung",
+      "target": "g9-do-dai-duong-tron-cung",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g9-do-dai-duong-tron-cung",
+      "target": "g9-dien-tich-hinh-tron-quat",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-chu-vi-dien-tich-chu-nhat",
+      "target": "g9-dien-tich-hinh-tron-quat",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g9-dien-tich-hinh-tron-quat",
+      "target": "g9-hinh-vanh-khuyen",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g9-duong-tron",
+      "target": "g9-vi-tri-duong-thang-duong-tron",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-vuong-goc-duong-xien",
+      "target": "g9-vi-tri-duong-thang-duong-tron",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g9-vi-tri-duong-thang-duong-tron",
+      "target": "g9-tiep-tuyen",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g9-tiep-tuyen",
+      "target": "g9-hai-tiep-tuyen",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-bang-nhau-tam-giac-vuong",
+      "target": "g9-hai-tiep-tuyen",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g9-duong-tron",
+      "target": "g9-hai-duong-tron",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-bat-dang-thuc-tam-giac",
+      "target": "g9-hai-duong-tron",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g9-goc-o-tam-cung",
+      "target": "g9-goc-noi-tiep",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g9-goc-noi-tiep",
+      "target": "g9-goc-chan-nua-duong-tron",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g9-duong-kinh-day",
+      "target": "g9-goc-chan-nua-duong-tron",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-dong-quy-trung-truc",
+      "target": "g9-ngoai-tiep-tam-giac",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g8-trung-tuyen-canh-huyen",
+      "target": "g9-ngoai-tiep-tam-giac",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-dong-quy-phan-giac",
+      "target": "g9-noi-tiep-tam-giac",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g9-tiep-tuyen",
+      "target": "g9-noi-tiep-tam-giac",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g9-goc-noi-tiep",
+      "target": "g9-tu-giac-noi-tiep",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g8-tong-goc-tu-giac",
+      "target": "g9-tu-giac-noi-tiep",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g8-hinh-chu-nhat",
+      "target": "g9-ngoai-tiep-chu-nhat-vuong",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g8-pythagore",
+      "target": "g9-ngoai-tiep-chu-nhat-vuong",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g9-tu-giac-noi-tiep",
+      "target": "g9-ngoai-tiep-chu-nhat-vuong",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g9-goc-o-tam-cung",
+      "target": "g9-da-giac-deu",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-tong-goc-tam-giac",
+      "target": "g9-da-giac-deu",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-luc-giac-deu",
+      "target": "g9-da-giac-deu",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g9-da-giac-deu",
+      "target": "g9-phep-quay",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g6-tam-doi-xung",
+      "target": "g9-phep-quay",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g9-dien-tich-hinh-tron-quat",
+      "target": "g9-hinh-tru",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-hinh-hop-chu-nhat",
+      "target": "g9-hinh-tru",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g8-pythagore",
+      "target": "g9-hinh-non",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g9-hinh-tru",
+      "target": "g9-hinh-non",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g9-dien-tich-hinh-tron-quat",
+      "target": "g9-hinh-cau",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    },
+    {
+      "source": "g7-hinh-lap-phuong",
+      "target": "g9-hinh-cau",
+      "type": "PREREQUISITE_OF",
+      "review_status": "cho-giao-vien-duyet",
+      "origin": "editorial_proposal"
+    }
+  ]
+}

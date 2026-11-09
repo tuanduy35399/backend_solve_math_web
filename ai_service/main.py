@@ -130,13 +130,14 @@ def socratic_ask(prompt_question: str = Form(default='',max_length=2000),session
     gap_context=None
     if reply.correct is False and reply.concept and os.getenv('RAG_ENABLED','false').lower()=='true':
         from integrations.geometry_rag import retrieve
-        try: gap_context={'status':'retrieved',**retrieve(reply.concept)}
+        try: gap_context={'status':'retrieved',**retrieve(reply.concept,query=text)}
         except Exception: gap_context={'status':'unavailable','detail':'Đã ghi nhận kiến thức cần ôn; kho RAG chưa truy xuất được.'}
     return {'session':SessionSerializer(session).data,'geometry':reply.geometry.model_dump() if reply.geometry else None,'response':response,'gap_context':gap_context}
 
 
 class ConceptRequest(BaseModel):
     concept_id: str = Field(min_length=1,max_length=80)
+    query: str|None = Field(default=None,max_length=2000)
 
 
 def published_material(pk):
@@ -149,7 +150,7 @@ def published_material(pk):
 def analyze_gap(body: ConceptRequest,user=Depends(current_user)):
     published_material(body.concept_id)
     from integrations.geometry_rag import retrieve
-    try: return retrieve(body.concept_id)
+    try: return retrieve(body.concept_id,query=body.query)
     except Exception as exc: failure(exc)
 
 
@@ -165,11 +166,30 @@ def recommend(body: ConceptRequest,user=Depends(current_user)):
     material=published_material(body.concept_id)
     from integrations.geometry_rag import retrieve
     try:
-        context=retrieve(body.concept_id)
+        context=retrieve(body.concept_id,query=body.query)
         content,provider=generate_learning(context)
         quiz=Quiz.objects.create(user=user,kind=material.kind,summary=content.summary,questions=[q.model_dump() for q in content.questions],source=provider,exercises=[e.model_dump() for e in content.exercises],contexts=context['contexts'])
     except Exception as exc: failure(exc)
     return {'quiz_id':str(quiz.pk),'summary':content.summary,'exercises':[e.model_dump() for e in content.exercises],'source':provider,'contexts':context['contexts'],'notice':'Nội dung AI cần đối chiếu; đáp án quiz được chấm tại máy chủ.'}
+
+
+@app.post('/api/v1/system/check')
+def check_system(user=Depends(admin)):
+    from integrations.service_checks import check_services
+    return check_services()
+
+
+@app.get('/api/v1/rag/graph')
+def extracted_graph(concept_id:str,user=Depends(current_user)):
+    published_material(concept_id)
+    from integrations.geometry_extraction import graph_for_concept
+    try:
+        from neo4j import GraphDatabase
+        if not os.getenv('NEO4J_URI') or not os.getenv('NEO4J_PASSWORD'):
+            raise ProviderUnavailable('Chưa cấu hình Neo4j.')
+        with GraphDatabase.driver(os.environ['NEO4J_URI'],auth=(os.getenv('NEO4J_USERNAME','neo4j'),os.environ['NEO4J_PASSWORD']),connection_timeout=5) as driver:
+            return graph_for_concept(driver,concept_id)
+    except Exception as exc:failure(exc)
 
 
 @app.post('/api/v1/research/report')

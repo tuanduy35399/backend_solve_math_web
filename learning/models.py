@@ -33,6 +33,7 @@ class Material(models.Model):
     minutes = models.PositiveSmallIntegerField(default=5)
     status = models.CharField(max_length=24, choices=[('Bản nháp','Bản nháp'),('Đã xuất bản','Đã xuất bản')], default='Bản nháp')
     source = models.CharField(max_length=500, blank=True)
+    corpus_metadata = models.JSONField(default=dict, blank=True)
     updated = models.DateTimeField(auto_now=True)
 
 class Prerequisite(models.Model):

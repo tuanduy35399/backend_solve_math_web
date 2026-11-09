@@ -5,7 +5,7 @@ from django.db import transaction
 from django.db.models import Count, Sum
 from django.utils import timezone
 from rest_framework import serializers, status, viewsets
-from rest_framework.decorators import api_view, permission_classes, throttle_classes
+from rest_framework.decorators import action, api_view, permission_classes, throttle_classes
 from rest_framework.exceptions import PermissionDenied, ValidationError
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
@@ -105,7 +105,22 @@ class MaterialViewSet(viewsets.ModelViewSet):
     def perform_update(self, serializer):
         if 'id' in serializer.validated_data and serializer.validated_data['id'] != serializer.instance.pk:
             raise ValidationError('Không đổi mã học liệu đã tạo.')
-        serializer.save()
+        metadata=dict(serializer.instance.corpus_metadata)
+        if metadata and any(key in serializer.validated_data and serializer.validated_data[key]!=getattr(serializer.instance,key) for key in ['title','text','formula','note','source']):
+            metadata.update(review_status='cho-giao-vien-duyet',reviewed_at=None,reviewed_by=None)
+        serializer.save(corpus_metadata=metadata)
+
+    @action(detail=True,methods=['post'])
+    def review(self,request,pk=None):
+        material=self.get_object()
+        if type(request.data.get('approved')) is not bool:
+            raise ValidationError('approved phải là true hoặc false.')
+        metadata=dict(material.corpus_metadata)
+        metadata.update(review_status='approved' if request.data['approved'] else 'cho-giao-vien-duyet',
+                        reviewed_at=timezone.now().isoformat(),reviewed_by=request.user.pk)
+        material.corpus_metadata=metadata
+        material.save(update_fields=['corpus_metadata','updated'])
+        return Response(self.get_serializer(material).data)
 
 class SessionViewSet(viewsets.ModelViewSet):
     serializer_class = SessionSerializer
@@ -123,6 +138,10 @@ def edges(request):
         if not Material.objects.filter(pk=source).exists() or not Material.objects.filter(pk=target).exists(): raise ValidationError('Kiến thức không tồn tại.')
         if request.method=='POST':
             with transaction.atomic():
+                source_grade=Material.objects.get(pk=source).grade
+                target_grade=Material.objects.get(pk=target).grade
+                if source_grade>target_grade:
+                    raise ValidationError('Kiến thức lớp cao hơn không thể là tiên quyết bắt buộc của bài lớp thấp hơn.')
                 pairs=list(Prerequisite.objects.values_list('source_id','target_id'))
                 def reaches(a,b,seen=None):
                     seen=set() if seen is None else seen
