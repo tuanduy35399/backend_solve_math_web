@@ -271,7 +271,7 @@ class DraftRequest(BaseModel):
     count: int = Field(default=5,ge=1,le=10)
 
 
-@app.post('/api/v1/assignments/ai-draft')
+@app.post('/api/v1/ai/assignment-draft')
 def assignment_ai_draft(body: DraftRequest,user=Depends(educator)):
     """AI drafts questions for a teacher; nothing is saved until the teacher reviews and saves the assignment."""
     material=published_material(body.concept_id)
@@ -321,7 +321,7 @@ def personal_quiz(user=Depends(current_user)):
             'focus':[titles.get(c,c) for c in focus],'notice':'Quiz tạo từ kết quả học của riêng em; đáp án được chấm tại máy chủ.'}
 
 
-@app.post('/api/v1/statistics/report')
+@app.post('/api/v1/ai/learning-report')
 def learning_report(user=Depends(educator)):
     """Class-level learning report for teachers. Only aggregates are sent to the model, never student names."""
     from django.db.models import Count, Sum

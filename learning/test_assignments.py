@@ -87,13 +87,13 @@ class AssignmentFlowTests(TransactionTestCase):
         headers = self.as_user(self.teacher)
         content = LearningContent(summary='S', questions=[QUESTION])
         with patch.dict(os.environ, {'RAG_ENABLED': 'false'}), patch('ai_service.main.generate_learning', return_value=(content, 'openai')) as generate:
-            response = self.ai.post('/api/v1/assignments/ai-draft', json={'concept_id': 'trig', 'count': 3}, headers=headers)
+            response = self.ai.post('/api/v1/ai/assignment-draft', json={'concept_id': 'trig', 'count': 3}, headers=headers)
         self.assertEqual(response.status_code, 200, response.text)
         self.assertEqual(response.json()['context_source'], 'django')
         self.assertEqual(generate.call_args.kwargs['questions'], 3)
         self.assertEqual(generate.call_args.args[0]['contexts'][0]['concept_id'], 'trig')
         self.assertEqual(Quiz.objects.filter(source='assignment').count(), 0)  # nothing saved before teacher review
-        self.assertEqual(self.ai.post('/api/v1/assignments/ai-draft', json={'concept_id': 'trig'}, headers=self.as_user(self.student)).status_code, 403)
+        self.assertEqual(self.ai.post('/api/v1/ai/assignment-draft', json={'concept_id': 'trig'}, headers=self.as_user(self.student)).status_code, 403)
 
     def test_personal_quiz_uses_own_learning_data(self):
         headers = self.as_user(self.student)
@@ -115,11 +115,11 @@ class AssignmentFlowTests(TransactionTestCase):
 
     def test_learning_report_sends_aggregates_only(self):
         headers = self.as_user(self.teacher)
-        self.assertEqual(self.ai.post('/api/v1/statistics/report', headers=headers).status_code, 422)
+        self.assertEqual(self.ai.post('/api/v1/ai/learning-report', headers=headers).status_code, 422)
         KnowledgeGap.objects.create(user=self.student, concept_id='trig', errors=3)
         reply = {'content': '## Tổng quan\nÍt dữ liệu.', 'focus': [{'concept_id': 'trig', 'title': 'T', 'reason': 'r', 'suggestion': 's'}, {'concept_id': 'bịa', 'title': 'x'}]}
         with patch('ai_service.providers.complete_json', return_value=(reply, 'gemini')) as complete:
-            response = self.ai.post('/api/v1/statistics/report', headers=headers)
+            response = self.ai.post('/api/v1/ai/learning-report', headers=headers)
         self.assertEqual(response.status_code, 200, response.text)
         self.assertNotIn('Nguyễn Văn An', complete.call_args.args[0])
         self.assertEqual([f['concept_id'] for f in response.json()['focus']], ['trig'])
