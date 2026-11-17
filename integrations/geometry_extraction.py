@@ -47,7 +47,7 @@ def cache_key(text):
 
 def make_extractor():
     if os.getenv('CONTENT_PROVIDER','').lower()!='openai' or not all(os.getenv(k) for k in ['OPENAI_API_KEY','OPENAI_BASE_URL','OPENAI_MODEL']):
-        raise ProviderUnavailable('Trích xuất đồ thị cần cấu hình dịch vụ bên ngoài tương thích OpenAI. Không dùng Qwen gia sư.')
+        raise ProviderUnavailable('Trích xuất đồ thị cần cấu hình dịch vụ bên ngoài tương thích OpenAI.')
     from llama_index.core.indices.property_graph import SchemaLLMPathExtractor
     from llama_index.llms.openai_like import OpenAILike
     llm=OpenAILike(model=os.environ['OPENAI_MODEL'],api_base=os.environ['OPENAI_BASE_URL'],

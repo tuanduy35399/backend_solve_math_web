@@ -42,6 +42,18 @@ class MaterialSerializer(serializers.ModelSerializer):
         exclude = ['owner']
         read_only_fields = ['updated', 'corpus_metadata']
 
+class MaterialOverviewSerializer(MaterialSerializer):
+    class Meta(MaterialSerializer.Meta):
+        exclude = ['owner', 'corpus_metadata']
+
+
+class MaterialListSerializer(MaterialSerializer):
+    review_status = serializers.CharField(source='corpus_metadata.review_status', default='', read_only=True)
+    class Meta:
+        model = Material
+        fields = ['id', 'title', 'topic', 'grade', 'kind', 'formula', 'status', 'updated', 'ownerId', 'review_status']
+
+
 class SessionSerializer(serializers.ModelSerializer):
     type = serializers.CharField(source='kind', read_only=True)
     date = serializers.DateTimeField(source='created_at', read_only=True)
@@ -57,11 +69,14 @@ class SessionSerializer(serializers.ModelSerializer):
 class AttemptSerializer(serializers.ModelSerializer):
     mastered = serializers.SerializerMethodField()
     kind = serializers.CharField(source='quiz.kind')
+    title = serializers.CharField(source='quiz.title')
+    quiz = serializers.CharField(source='quiz_id')
+    source = serializers.CharField(source='quiz.source')
     total = serializers.SerializerMethodField()
     date = serializers.DateTimeField(source='created_at')
     class Meta:
         model = QuizAttempt
-        fields = ['id','kind','total','score','date','seconds','answers','mastered']
+        fields = ['id','quiz','title','source','kind','total','score','date','seconds','answers','mastered']
     def get_total(self, obj): return len(obj.quiz.questions)
     def get_mastered(self, obj):
         missed={q['concept'] for a,q in zip(obj.answers,obj.quiz.questions) if a!=q['correct']}
@@ -78,11 +93,11 @@ class TrainingSerializer(serializers.ModelSerializer):
 
 
 class StorySource(serializers.Serializer):
-    title=serializers.CharField(max_length=300)
-    url=serializers.URLField(max_length=2000)
-    scope=serializers.CharField(max_length=2000)
+    title=serializers.CharField(max_length=300,allow_blank=True,required=False,default='')
+    url=serializers.URLField(max_length=2000,allow_blank=True,required=False,default='',error_messages={'invalid':'Nhập đường dẫn http:// hoặc https:// hợp lệ.'})
+    scope=serializers.CharField(max_length=2000,allow_blank=True,required=False,default='')
     def validate_url(self,value):
-        if not value.startswith(('https://','http://')): raise serializers.ValidationError('Nguồn cần URL HTTP hoặc HTTPS.')
+        if value and not value.startswith(('https://','http://')): raise serializers.ValidationError('Nguồn cần URL HTTP hoặc HTTPS.')
         return value
 
 class StoryPayload(serializers.Serializer):
@@ -101,5 +116,36 @@ class StoryPayload(serializers.Serializer):
             for key in ['title','theorem','hook','topic','insight','formula','condition','evidence','question','answer']:
                 if not data.get(key,'').strip(): raise serializers.ValidationError({key:'Bắt buộc khi xuất bản.'})
             if not data['paragraphs'] or not data['sources']: raise serializers.ValidationError('Bài xuất bản cần nội dung và nguồn.')
+            missing={i:{key:'Cần điền trước khi xuất bản.' for key in ['title','url','scope'] if not source.get(key)} for i,source in enumerate(data['sources'])}
+            missing={i:fields for i,fields in missing.items() if fields}
+            if missing: raise serializers.ValidationError({'sources':missing})
         if sum(len(p) for p in data['paragraphs'])>40000: raise serializers.ValidationError('Nội dung tối đa 40.000 ký tự.')
         return data
+
+
+class QuizQuestion(serializers.Serializer):
+    concept=serializers.CharField(max_length=80)
+    question=serializers.CharField(max_length=2000)
+    options=serializers.ListField(child=serializers.CharField(max_length=2000),min_length=4,max_length=4)
+    correct=serializers.IntegerField(min_value=0,max_value=3)
+    explanation=serializers.CharField(max_length=3000,allow_blank=True,required=False,default='')
+    def validate_options(self,value):
+        if len({o.strip() for o in value})!=4 or any(not o.strip() for o in value): raise serializers.ValidationError('Cần bốn đáp án khác nhau, không bỏ trống.')
+        return value
+    def validate_concept(self,value):
+        if not Material.objects.filter(pk=value).exists(): raise serializers.ValidationError('Kiến thức không tồn tại trong kho học liệu.')
+        return value
+
+
+class AssignmentPayload(serializers.Serializer):
+    title=serializers.CharField(max_length=140)
+    material=serializers.CharField(max_length=80)
+    grade=serializers.IntegerField(min_value=6,max_value=12)
+    summary=serializers.CharField(max_length=4000,allow_blank=True,required=False,default='')
+    questions=QuizQuestion(many=True)
+    def validate_material(self,value):
+        if not Material.objects.filter(pk=value,status='Đã xuất bản').exists(): raise serializers.ValidationError('Chọn một học liệu đã xuất bản.')
+        return value
+    def validate_questions(self,value):
+        if not 1<=len(value)<=30: raise serializers.ValidationError('Bài giao cần từ 1 đến 30 câu hỏi.')
+        return value

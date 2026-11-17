@@ -58,9 +58,16 @@ class Quiz(models.Model):
     summary = models.TextField(blank=True)
     questions = models.JSONField(default=list)
     exercises = models.JSONField(default=list)
-    source = models.CharField(max_length=32, default='curated')
+    source = models.CharField(max_length=32, default='curated')  # curated | gemini/openai (personal AI) | assignment
     contexts = models.JSONField(default=list)
     created_at = models.DateTimeField(auto_now_add=True)
+    # Teacher assignments: drafted and reviewed by the author (user), then published to students of `grade`.
+    title = models.CharField(max_length=140, blank=True)
+    status = models.CharField(max_length=12, choices=[('draft','draft'),('published','published')], default='published')
+    grade = models.PositiveSmallIntegerField(null=True, blank=True)
+    material = models.ForeignKey(Material, null=True, blank=True, on_delete=models.SET_NULL, related_name='assignments')
+    published_at = models.DateTimeField(null=True, blank=True)
+    updated_at = models.DateTimeField(auto_now=True)
 
 class QuizAttempt(models.Model):
     id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
@@ -100,4 +107,14 @@ class TrainingRun(models.Model):
     checkpoint = models.CharField(max_length=500)
     metrics = models.JSONField(default=dict)
     note = models.TextField(blank=True, max_length=2000)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+class LearningReport(models.Model):
+    """AI-written overview of class learning status for teachers (aggregated, no student names sent to the model)."""
+    id = models.UUIDField(primary_key=True, default=uuid.uuid4, editable=False)
+    owner = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
+    content = models.TextField()
+    focus = models.JSONField(default=list)
+    snapshot = models.JSONField(default=dict)
+    source = models.CharField(max_length=32)
     created_at = models.DateTimeField(auto_now_add=True)

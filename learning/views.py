@@ -6,13 +6,13 @@ from django.db.models import Count, Sum
 from django.utils import timezone
 from rest_framework import serializers, status, viewsets
 from rest_framework.decorators import action, api_view, permission_classes, throttle_classes
-from rest_framework.exceptions import PermissionDenied, ValidationError
+from rest_framework.exceptions import NotFound, PermissionDenied, ValidationError
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework.authtoken.models import Token
 from rest_framework.throttling import ScopedRateThrottle
-from .models import Profile, LearningSession, Material, Prerequisite, KnowledgeGap, Quiz, QuizAttempt, Story, ResearchReport, SystemConfig, TrainingRun
-from .serializers import Registration, StoryPayload, MaterialSerializer, SessionSerializer, AttemptSerializer, TrainingSerializer, profile_data
+from .models import Profile, LearningSession, Material, Prerequisite, KnowledgeGap, Quiz, QuizAttempt, Story, ResearchReport, SystemConfig, TrainingRun, LearningReport
+from .serializers import Registration, StoryPayload, AssignmentPayload, MaterialSerializer, SessionSerializer, AttemptSerializer, TrainingSerializer, profile_data
 from .permissions import role, MaterialAccess, EducatorOnly, AdminOnly
 from .services import record_gap
 
@@ -95,12 +95,39 @@ class MaterialViewSet(viewsets.ModelViewSet):
     serializer_class = MaterialSerializer
     permission_classes = [MaterialAccess]
     def get_queryset(self):
-        qs=Material.objects.order_by('title')
+        qs=Material.objects.order_by('title','pk')
         if role(self.request.user)=='student': qs=qs.filter(status='Đã xuất bản')
         elif role(self.request.user)=='educator':
             from django.db.models import Q
             qs=qs.filter(Q(status='Đã xuất bản')|Q(owner=self.request.user))
         return qs
+    def list(self, request, *args, **kwargs):
+        from .serializers import MaterialOverviewSerializer, MaterialListSerializer
+        from rest_framework.pagination import PageNumberPagination
+        from django.db.models import Q
+        qs=self.get_queryset()
+        if request.query_params.get('brief')=='1':
+            return Response(MaterialOverviewSerializer(qs.defer('corpus_metadata'),many=True).data)
+        if 'page' not in request.query_params:
+            return super().list(request,*args,**kwargs)
+        search=request.query_params.get('search','').strip().casefold()
+        if search:
+            # SQLite's icontains does not fold Vietnamese letters such as Đ/đ.
+            ids=[pk for pk,title in qs.values_list('pk','title').iterator() if search in title.casefold()]
+            qs=qs.filter(pk__in=ids)
+        status_filter=request.query_params.get('status','all')
+        if status_filter!='all': qs=qs.filter(status=status_filter)
+        review=request.query_params.get('review','all')
+        approved=Q(corpus_metadata__review_status='approved')
+        if review=='approved': qs=qs.filter(approved)
+        elif review=='pending': qs=qs.filter(~approved|Q(corpus_metadata__review_status__isnull=True))
+        elif review!='all': raise ValidationError('Trạng thái duyệt không hợp lệ.')
+        paginator=PageNumberPagination()
+        paginator.page_size=10
+        paginator.page_size_query_param='page_size'
+        paginator.max_page_size=50
+        page=paginator.paginate_queryset(qs.defer('text','note','source'),request,view=self)
+        return paginator.get_paginated_response(MaterialListSerializer(page,many=True).data)
     def perform_create(self, serializer): serializer.save(owner=self.request.user)
     def perform_update(self, serializer):
         if 'id' in serializer.validated_data and serializer.validated_data['id'] != serializer.instance.pk:
@@ -165,19 +192,28 @@ def gaps(request):
 def attempts(request):
     return Response(AttemptSerializer(QuizAttempt.objects.filter(user=request.user).select_related('quiz').order_by('-created_at'),many=True).data)
 
+def visible_quizzes(user):
+    """Curated quizzes, the user's own (personal AI or authored), and assignments published for the student's grade."""
+    from django.db.models import Q
+    published=Q(source='assignment',status='published')
+    if role(user)=='student':
+        grade=Profile.objects.get_or_create(user=user)[0].grade
+        published&=Q(grade__isnull=True)|Q(grade=grade)
+    return Quiz.objects.filter(Q(user=user)|Q(user__isnull=True)|published)
+
+
 @api_view(['GET'])
 def quiz_detail(request, pk):
-    from django.db.models import Q
-    quiz=Quiz.objects.filter(Q(user=request.user)|Q(user__isnull=True),pk=pk).first()
+    quiz=visible_quizzes(request.user).filter(pk=pk).first()
     if not quiz: return Response(status=404)
-    return Response({'id':str(quiz.pk),'kind':quiz.kind,'summary':quiz.summary,'source':quiz.source,'exercises':quiz.exercises,'contexts':quiz.contexts,
+    return Response({'id':str(quiz.pk),'kind':quiz.kind,'title':quiz.title,'summary':quiz.summary,'source':quiz.source,'exercises':quiz.exercises,'contexts':quiz.contexts,
                      'questions':[{k:v for k,v in q.items() if k not in ('correct','explanation')} for q in quiz.questions]})
 
 @api_view(['POST'])
 def submit_quiz(request, pk):
-    from django.db.models import Q
-    quiz=Quiz.objects.filter(Q(user=request.user)|Q(user__isnull=True),pk=pk).first()
+    quiz=visible_quizzes(request.user).filter(pk=pk).first()
     if not quiz: return Response(status=404)
+    if quiz.source=='assignment' and quiz.status!='published': raise ValidationError('Bài giao đang ở trạng thái nháp.')
     answers=request.data.get('answers');seconds=request.data.get('seconds',0)
     if not isinstance(answers,list) or len(answers)!=len(quiz.questions): raise ValidationError('Trả lời đầy đủ các câu hỏi.')
     if not isinstance(seconds,int) or isinstance(seconds,bool) or not 0<=seconds<=86400: raise ValidationError('Thời gian không hợp lệ.')
@@ -190,11 +226,106 @@ def submit_quiz(request, pk):
         KnowledgeGap.objects.filter(user=request.user,concept_id__in=mastered).update(resolved=True,updated=timezone.now())
     return Response({'result':AttemptSerializer(attempt).data,'questions':quiz.questions})
 
+
+def assignment_data(quiz,detail=False):
+    attempts=list(quiz.quizattempt_set.all()) if quiz.pk else []
+    total=len(quiz.questions) or 1
+    data={'id':str(quiz.pk),'title':quiz.title,'status':quiz.status,'grade':quiz.grade,'material':quiz.material_id,
+          'material_title':quiz.material.title if quiz.material else '','questions_count':len(quiz.questions),
+          'attempts':len(attempts),'students':len({a.user_id for a in attempts}),
+          'average':round(sum(a.score for a in attempts)/len(attempts)/total*100) if attempts else None,
+          'author':quiz.user.first_name or quiz.user.username if quiz.user else '','published_at':quiz.published_at,'updated_at':quiz.updated_at}
+    if detail: data.update(summary=quiz.summary,questions=quiz.questions)
+    return data
+
+
+def own_assignment(request,pk):
+    quiz=Quiz.objects.filter(pk=pk,source='assignment').select_related('material','user').first()
+    if not quiz: raise NotFound('Không tìm thấy bài giao.')
+    if role(request.user)!='admin' and quiz.user_id!=request.user.id: raise PermissionDenied('Chỉ tác giả hoặc quản trị viên được chỉnh bài giao này.')
+    return quiz
+
+
+@api_view(['GET','POST'])
+@permission_classes([EducatorOnly])
+def assignments(request):
+    if request.method=='POST':
+        payload=AssignmentPayload(data=request.data);payload.is_valid(raise_exception=True);data=payload.validated_data
+        material=Material.objects.get(pk=data['material'])
+        quiz=Quiz.objects.create(user=request.user,source='assignment',status='draft',title=data['title'],grade=data['grade'],material=material,
+                                 kind=material.kind,summary=data['summary'],questions=[dict(q) for q in data['questions']])
+        return Response(assignment_data(quiz,True),status=201)
+    qs=Quiz.objects.filter(source='assignment').select_related('material','user').prefetch_related('quizattempt_set').order_by('-updated_at')
+    if role(request.user)!='admin': qs=qs.filter(user=request.user)
+    return Response([assignment_data(q) for q in qs])
+
+
+@api_view(['GET','PATCH','DELETE'])
+@permission_classes([EducatorOnly])
+def assignment_detail(request,pk):
+    quiz=own_assignment(request,pk)
+    has_attempts=quiz.quizattempt_set.exists()
+    if request.method=='DELETE':
+        if has_attempts: raise ValidationError('Bài giao đã có học sinh làm; hãy chuyển về nháp để ẩn thay vì xóa kết quả của học sinh.')
+        quiz.delete();return Response(status=204)
+    if request.method=='PATCH':
+        payload=AssignmentPayload(data=request.data);payload.is_valid(raise_exception=True);data=payload.validated_data
+        questions=[dict(q) for q in data['questions']]
+        if has_attempts and questions!=quiz.questions: raise ValidationError('Bài giao đã có học sinh làm nên không đổi câu hỏi hoặc đáp án; hãy tạo bài mới.')
+        material=Material.objects.get(pk=data['material'])
+        quiz.title=data['title'];quiz.grade=data['grade'];quiz.material=material;quiz.kind=material.kind;quiz.summary=data['summary'];quiz.questions=questions
+        quiz.save()
+    return Response(assignment_data(quiz,True))
+
+
+@api_view(['POST'])
+@permission_classes([EducatorOnly])
+def publish_assignment(request,pk):
+    quiz=own_assignment(request,pk)
+    if type(request.data.get('published')) is not bool: raise ValidationError('published phải là true hoặc false.')
+    if request.data['published']:
+        if not quiz.questions: raise ValidationError('Bài giao chưa có câu hỏi.')
+        quiz.status='published';quiz.published_at=quiz.published_at or timezone.now()
+    else: quiz.status='draft'
+    quiz.save(update_fields=['status','published_at','updated_at'])
+    return Response(assignment_data(quiz,True))
+
+
+@api_view(['GET'])
+@permission_classes([EducatorOnly])
+def assignment_results(request,pk):
+    quiz=own_assignment(request,pk)
+    attempts=list(quiz.quizattempt_set.select_related('user').order_by('created_at'))
+    per_question=[]
+    for i,q in enumerate(quiz.questions):
+        picks=[a.answers[i] for a in attempts if i<len(a.answers)]
+        wrong=[p for p in picks if p!=q['correct']]
+        common=max(set(wrong),key=wrong.count) if wrong else None
+        per_question.append({'index':i,'question':q['question'],'concept':q['concept'],'correct_rate':round(sum(p==q['correct'] for p in picks)/len(picks)*100) if picks else None,
+                             'common_wrong':q['options'][common] if common is not None else None,'common_wrong_count':wrong.count(common) if wrong else 0})
+    students={}
+    for a in attempts:
+        entry=students.setdefault(a.user_id,{'name':a.user.first_name or a.user.username,'attempts':0,'best':0,'last':None})
+        entry['attempts']+=1;entry['best']=max(entry['best'],a.score);entry['last']=a.created_at
+    return Response({**assignment_data(quiz),'total':len(quiz.questions),'questions':per_question,'student_rows':sorted(students.values(),key=lambda s:s['best'])})
+
+
 @api_view(['GET'])
 @permission_classes([EducatorOnly])
 def statistics(request):
+    own=Quiz.objects.filter(source='assignment').select_related('material','user').prefetch_related('quizattempt_set').order_by('-updated_at')
+    if role(request.user)!='admin': own=own.filter(user=request.user)
     return Response({'students':Profile.objects.filter(role='student',user__is_superuser=False).count(), 'sessions':LearningSession.objects.count(),
-                     'attempts':QuizAttempt.objects.count(),'gaps':list(KnowledgeGap.objects.filter(resolved=False).values('concept_id','concept__title').annotate(students=Count('user',distinct=True),errors=Sum('errors')))})
+                     'attempts':QuizAttempt.objects.count(),'gaps':list(KnowledgeGap.objects.filter(resolved=False).values('concept_id','concept__title').annotate(students=Count('user',distinct=True),errors=Sum('errors')).order_by('-errors')),
+                     'assignments':[assignment_data(q) for q in own]})
+
+
+@api_view(['GET'])
+@permission_classes([EducatorOnly])
+def learning_reports(request):
+    qs=LearningReport.objects.all() if role(request.user)=='admin' else LearningReport.objects.filter(owner=request.user)
+    return Response([{'id':str(r.pk),'content':r.content,'focus':r.focus,'source':r.source,'date':r.created_at.isoformat()} for r in qs.order_by('-created_at')[:20]])
+
 
 @api_view(['GET','POST','DELETE'])
 def stories(request):
@@ -256,6 +387,9 @@ def health(request): return Response({'status':'ok','service':'django-rest'})
 
 @api_view(['GET'])
 def quizzes(request):
-    from django.db.models import Q
-    qs=Quiz.objects.filter(Q(user=request.user)|Q(user__isnull=True)).order_by('-created_at')
-    return Response([{'id':str(q.pk),'kind':q.kind,'source':q.source,'summary':q.summary} for q in qs])
+    qs=visible_quizzes(request.user).select_related('material').order_by('-created_at')
+    best={}
+    for quiz_id,score in QuizAttempt.objects.filter(user=request.user).values_list('quiz_id','score'): best[quiz_id]=max(best.get(quiz_id,0),score)
+    return Response([{'id':str(q.pk),'kind':q.kind,'source':q.source,'summary':q.summary,'title':q.title,'status':q.status,'grade':q.grade,
+                      'material_title':q.material.title if q.material else '','questions_count':len(q.questions),'created_at':q.created_at.isoformat(),
+                      'best_score':best.get(q.pk)} for q in qs if q.source!='assignment' or q.status=='published' or q.user_id==request.user.id])

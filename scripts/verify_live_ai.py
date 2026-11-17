@@ -30,7 +30,7 @@ def worker(generate,research):
     Profile.objects.create(user=user,role='educator')
     headers={'Authorization':'Token '+Token.objects.create(user=user).key}
     client=TestClient(app)
-    result={'fixture_database':'temporary','qwen':'not_tested_no_gpu','retrieval':[]}
+    result={'fixture_database':'temporary','tutor':'not_tested','retrieval':[]}
     try:
         for pk in ['g6-trung-diem','g7-tam-giac-can','g8-pythagore','g9-tiep-tuyen']:
             started=time.perf_counter()

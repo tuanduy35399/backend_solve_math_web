@@ -27,6 +27,8 @@ Tài liệu dành cho học sinh, giáo viên và quản trị viên. Các tình
 5. Trên máy tính, bấm biểu tượng cạnh “Không gian học tập” để **Ẩn thanh bên** hoặc **Hiện thanh bên**. Lựa chọn được nhớ khi tải lại trang.
 6. Trên điện thoại, bấm biểu tượng menu để mở thanh điều hướng; bấm dấu × hoặc vùng ngoài menu để đóng. Sidebar được thu gọn; trên màn hình thấp vẫn có thể cuộn menu nhưng không lộ thanh cuộn dài.
 
+Với tài khoản giáo viên/quản trị viên, Cài đặt hiển thị **Thông tin tài khoản** và vai trò được cấp. Các tài khoản này không có ô Lớp đang học hoặc nút xuất/xóa dữ liệu học tập cá nhân; thanh bên ghi Giáo viên/Quản trị viên thay cho lớp. Ngày cập nhật học liệu hiển thị dạng **ngày/tháng/năm · giờ:phút**, theo giờ Việt Nam.
+
 `localhost` trên điện thoại là chính điện thoại đó. Để dùng web từ điện thoại, cần địa chỉ web/LAN/HTTPS do người vận hành thiết lập; mở địa chỉ localhost của laptop trên điện thoại sẽ không tới được laptop.
 
 ## 3. Luồng tổng quát
@@ -141,6 +143,19 @@ Hạn mức ứng dụng hiện là **100 lượt sinh tóm tắt/bài tập/qui
 
 ## 7. Giáo viên: quản lý và duyệt học liệu
 
+### Tìm kiếm, phân trang và mở trình sửa
+
+Kho học liệu mặc định hiển thị 10 dòng/trang; dùng **Số dòng** để chọn 10, 20 hoặc 50, **Trang trước / Trang sau** hoặc chọn số trang. Bảng tải riêng từng trang từ máy chủ. Tìm kiếm và bộ lọc áp dụng toàn bộ kho; đổi điều kiện tìm sẽ quay về trang 1.
+
+Hai bộ lọc độc lập:
+
+- **Trạng thái xuất bản**: Đã xuất bản / Bản nháp, cho biết học sinh có được xem bài hay không.
+- **Duyệt nội dung**: Nội dung đã duyệt / Nội dung chưa duyệt, cho biết giáo viên đã kiểm tra bài hay chưa.
+
+Có thể kết hợp cả hai, ví dụ Đã xuất bản + Nội dung chưa duyệt. Bài không có ghi nhận duyệt được tính là chưa duyệt.
+
+Bấm biểu tượng **bút chì** ở một dòng: hệ thống tải chi tiết bài, cuộn tới trình sửa và đặt con trỏ ở tên học liệu. Tên và sơ đồ quan hệ vẫn có trong danh mục chung; dữ liệu corpus mở rộng chỉ tải khi đọc bài chi tiết.
+
 ### Biên soạn
 
 1. Mở **Kho học liệu → Thêm học liệu**.
@@ -162,8 +177,9 @@ Chỉ giáo viên/quản trị viên xem phần này trong **Kho học liệu**,
 
 ### Nghiên cứu nguồn và bài viết
 
-- Trong Kho học liệu, chọn bài rồi bấm **Tìm nguồn web & lập báo cáo**. Đọc báo cáo và nguồn, tải Markdown khi cần. Báo cáo được lưu nhưng chưa tự trở thành bài đã xuất bản.
-- Vào **Biên tập câu chuyện** để viết bài, thêm nguồn, xem trước, lưu nháp hoặc xuất bản.
+- Trong Kho học liệu, phần **Công cụ chuẩn bị bài dạy** giúp giáo viên rà soát kiến thức nền, tạo bài tập/quiz và tìm nguồn tham khảo. Chọn học liệu rồi bấm **Tìm nguồn web & lập báo cáo**. Đọc báo cáo và nguồn, tải Markdown khi cần. Báo cáo được lưu nhưng chưa tự trở thành bài đã xuất bản.
+- Vào **Biên tập câu chuyện** để viết bài, thêm nguồn, xem trước, lưu nháp hoặc xuất bản. Bản nháp giữ được các dòng nguồn chưa điền đủ; khi xuất bản, từng nguồn phải có tên, URL hợp lệ và phạm vi đối chiếu.
+- Nếu lưu nháp lỗi, đọc khung **Chưa thể lưu bản nháp**. Mỗi lỗi ghi rõ trường hoặc số thứ tự nguồn; bấm thông báo để đến ô cần sửa. Nội dung đang soạn vẫn được giữ, chỉ báo đã lưu khi máy chủ xác nhận. URL không rỗng phải dùng http/https hợp lệ.
 - **Thống kê học tập** hiển thị số liệu tổng hợp và các khái niệm đang cần củng cố. Tài khoản giáo viên không mặc định xem lịch sử/ảnh riêng của học sinh khác.
 
 ## 8. Quản trị viên
@@ -209,3 +225,13 @@ npm run dev
 Khởi tạo quản trị lần đầu dùng `manage.py createsuperuser`. Cấp quyền cho tài khoản đã đăng ký bằng `manage.py set_role TEN_DANG_NHAP educator` hoặc `admin`. Không có mật khẩu mặc định được phát chung trong tài liệu này.
 
 Các lệnh import/đồng bộ/trích xuất đồ thị nằm trong [hướng dẫn offline](../knowledge/OFFLINE_BUILD.md). Lệnh trích xuất có giới hạn theo lần chạy, không trừ hạn mức sinh bài/quiz hằng ngày.
+
+### Khi lập báo cáo báo lỗi gateway
+
+Với cấu hình gateway 9router đang dùng trên máy phát triển, cần chạy 9router trước khi gọi model. Lệnh đã xác nhận trên máy này:
+
+```bash
+9router --host 127.0.0.1 --no-browser --skip-update
+```
+
+Gateway lắng nghe ở cổng 20128. Nếu dịch vụ chưa chạy, ứng dụng báo không kết nối được gateway model sinh báo cáo; đây là lỗi kết nối model, khác với lỗi kho tri thức hoặc dịch vụ tìm kiếm Tavily.

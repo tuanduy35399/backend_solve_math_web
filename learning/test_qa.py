@@ -46,7 +46,7 @@ class IndependentQATests(TransactionTestCase):
         self.assertNotEqual(Material.objects.get(pk='trig').title,'Duplicate')
     def test_closed_session_cannot_accept_more_turns(self):
         session=LearningSession.objects.create(user=self.student,title='Completed',completed=True)
-        with patch('ai_service.main.qwen_reply') as provider:
+        with patch('ai_service.main.tutor_reply') as provider:
             result=self.ai.post('/api/v1/tutor/socratic-ask',data={'session_id':str(session.pk),'prompt_question':'Another answer'},headers=self.headers)
         self.assertEqual(result.status_code,409);provider.assert_not_called()
     def test_geometry_sync_ownership_and_locked_facts(self):
@@ -58,7 +58,7 @@ class IndependentQATests(TransactionTestCase):
         self.assertEqual(self.ai.post('/api/v1/Geometry2D/sync',json=body,headers=self.headers).status_code,409)
     def test_disabled_user_cannot_use_fastapi_token(self):
         self.student.is_active=False;self.student.save()
-        with patch('ai_service.main.qwen_reply') as provider:
+        with patch('ai_service.main.tutor_reply') as provider:
             result=self.ai.post('/api/v1/tutor/socratic-ask',data={'prompt_question':'Test'},headers=self.headers)
         self.assertEqual(result.status_code,401);provider.assert_not_called()
     def test_invalid_geometry_parameters_rejected(self):

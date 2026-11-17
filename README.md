@@ -1,10 +1,10 @@
 # MindGeoTutorAI backend
 
-Backend niên luận dùng Django REST Framework cho tài khoản/dữ liệu học tập và FastAPI cho suy luận Qwen, Hybrid RAG và sinh học liệu. Frontend React nằm ở repo cạnh bên `solve_math_vlm/frontend`.
+Backend niên luận dùng Django REST Framework cho tài khoản/dữ liệu học tập và FastAPI cho gia sư AI, Hybrid RAG và sinh học liệu. Frontend React nằm ở repo cạnh bên `solve_math_vlm/frontend`.
 
 ## Hai luồng AI
 
-1. **Chat giải toán:** React → FastAPI → Qwen do nhóm huấn luyện. Ảnh, đề bài và hội thoại chỉ đi tới máy chủ Qwen cấu hình bởi người vận hành. Thiếu model local trả `503`, không tự chuyển sang Gemini/OpenAI và không sinh câu trả lời giả.
+1. **Chat giải toán:** React → FastAPI → model tương thích OpenAI dùng chung với agent nghiên cứu (`OPENAI_BASE_URL`, `OPENAI_MODEL`, `OPENAI_API_KEY`). Ảnh, đề bài và hội thoại được gửi tới endpoint này; model cần hỗ trợ ảnh (`image_url`) để đọc đề từ ảnh. System prompt trong `ai_service/providers.py` bắt buộc gia sư chỉ gợi mở từng bước, không đưa đáp án cuối hay lời giải đầy đủ dù học sinh nài nỉ, và nhắc lại quy tắc sau mỗi lượt hội thoại. Thiếu cấu hình trả `503`, không sinh câu trả lời giả.
 2. **Tạo học liệu:** Kiến thức toán đã xuất bản trong Django → BGE-M3/Chroma + quan hệ Neo4j → hợp nhất RRF → model bên ngoài (Gemini hoặc OpenAI/tương thích OpenAI) → tóm tắt, bài tập và quiz. Model bên ngoài chỉ nhận ngữ cảnh học thuật. Bộ câu hỏi và bài tập được lưu trong Django; điểm quiz tính tại máy chủ.
 
 Luồng nghiên cứu web dành riêng cho giáo viên/quản trị viên: agent tìm tài liệu bổ trợ và tạo báo cáo Markdown có nguồn. Báo cáo chưa được coi là học liệu đã duyệt và không tự nhập vào kho toán.
@@ -43,10 +43,9 @@ SQLite lưu dữ liệu phát triển trong `db.sqlite3`; `DATABASE_PATH` cho ph
 
 | Nhóm | Biến | Ý nghĩa |
 |---|---|---|
-| Qwen | `QWEN_BASE_URL`, `QWEN_MODEL`, tùy chọn `QWEN_API_KEY` | Endpoint tự vận hành có `/chat/completions`; base URL thường kết thúc `/v1` |
+| Gia sư + agent | `OPENAI_API_KEY`, `OPENAI_MODEL`, `OPENAI_BASE_URL` | Endpoint tương thích OpenAI có `/chat/completions`, dùng chung cho chat gia sư, agent nghiên cứu và (nếu `CONTENT_PROVIDER=openai`) sinh học liệu |
 | Sinh học liệu | `CONTENT_PROVIDER=gemini` hoặc `openai` | Chọn model bên ngoài |
 | Gemini | `GEMINI_API_KEY`, `GEMINI_MODEL` | Sinh tóm tắt, bài tập, quiz; không dùng cho chat |
-| OpenAI | `OPENAI_API_KEY`, `OPENAI_MODEL`, tùy chọn `OPENAI_BASE_URL` | Dùng cho sinh học liệu nếu chọn openai; đồng thời là model agent nghiên cứu |
 | Neo4j | `NEO4J_URI`, `NEO4J_USERNAME`, `NEO4J_PASSWORD`, `NEO4J_DATABASE` | Đồ thị kiến thức toán; adapter quản lý nhãn `MindGeoConcept` |
 | Chroma | `CHROMA_DB_PATH`, `CHROMA_COLLECTION` | Collection chuyên biệt cho học liệu này; không dùng collection của dự án khác |
 | Hybrid RAG | `RAG_ENABLED=true` | Chỉ bật sau khi cài thư viện AI và chuẩn bị Neo4j |
@@ -59,7 +58,7 @@ uv pip install --python .venv/bin/python -r requirements-ai.txt
 
 Đây là nhóm thư viện tùy chọn, có thể tải PyTorch và nhiều dữ liệu. Lần đồng bộ đầu tiên còn phải tải trọng số `BAAI/bge-m3`; không có sẵn trong mã nguồn. Cấu hình Neo4j, bật RAG, khởi động lại backend, đăng nhập giáo viên rồi bấm **Thử đồng bộ chỉ mục** trong Kho học liệu. Thao tác thực hiện embedding và cập nhật collection/đồ thị thật. Sau khi sửa/xóa học liệu hoặc quan hệ, cần đồng bộ lại. Nếu một kênh lỗi, API báo chưa sẵn sàng thay vì gắn nhãn Hybrid RAG cho kết quả chỉ từ dữ liệu mẫu.
 
-`QWEN_BASE_URL` dành riêng model do nhóm vận hành, không trỏ sang API trả phí để giả lập Qwen. Phản hồi model cần JSON theo schema trong `ai_service/providers.py`: `text`, `math`, `highlight`, `geometry`, `correct`, `concept`, `done`. Không yêu cầu xuất suy nghĩ nội bộ. Hình hỗ trợ tam giác vuông, lăng trụ và hình cầu; hình không xác định được sẽ không tự bịa sơ đồ.
+Phản hồi gia sư cần JSON theo schema trong `ai_service/providers.py`: `text`, `math`, `highlight`, `geometry`, `correct`, `concept`, `done`. Lượt đầu tiên luôn bị ép `done=false`, `correct=null`. Kiểm tra nhanh bằng `.venv/bin/python scripts/check_tutor.py --infer`. Hình hỗ trợ tam giác vuông, lăng trụ và hình cầu; hình không xác định được sẽ không tự bịa sơ đồ.
 
 ## Nguồn được tái sử dụng
 
@@ -124,7 +123,7 @@ Frontend: `npm test`, `npm run build`, `npm run test:e2e -- --project=demo` cho 
 - Giáo viên có thể duyệt nội dung. Sửa nội dung sẽ bỏ nhãn đã duyệt; chỉ mục/đồ thị không khớp fingerprint bị báo cần đồng bộ/trích xuất lại. Không tự gửi dữ liệu cũ để sinh bài.
 - Admin có nút kiểm tra kết nối thật, không gọi sinh nội dung để giả làm health check.
 - `scripts/verify_live_ai.py` kiểm tra RAG và graph thật với tài khoản/SQLite tạm; `--generate --research` gọi model/Tavily thật cho nội dung học thuật và lưu bằng chứng trong `data/`.
-- [Hướng dẫn phục vụ checkpoint Qwen](docs/QWEN_DEPLOYMENT.md). Tác giả chưa có GPU, nên không tải/chạy model 9 GB trên laptop hoặc thay chat bằng Gemini.
+- [Hướng dẫn phục vụ checkpoint Qwen](docs/QWEN_DEPLOYMENT.md): tài liệu cũ, chat gia sư hiện không dùng Qwen local nữa mà dùng model `OPENAI_*` của agent.
 - Giữ hạn mức ứng dụng **100 lượt sinh học liệu/ngày cho cả hệ thống**; không phải quota của Gemini và không tính offline indexing.
 
 ## Hướng dẫn cho người dùng

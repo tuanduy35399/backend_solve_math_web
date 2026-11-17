@@ -26,7 +26,7 @@ def check_services():
     from django.db import connection
     connection.ensure_connection()
     result={'database':{'status':'connected'},'fastapi':{'status':'running'}}
-    result['qwen']=model_check(os.getenv('QWEN_BASE_URL'),os.getenv('QWEN_MODEL'),os.getenv('QWEN_API_KEY'))
+    result['tutor']=model_check(os.getenv('OPENAI_BASE_URL'),os.getenv('OPENAI_MODEL'),os.getenv('OPENAI_API_KEY'))
     result['content']=model_check(os.getenv('OPENAI_BASE_URL'),os.getenv('OPENAI_MODEL'),os.getenv('OPENAI_API_KEY')) if os.getenv('CONTENT_PROVIDER')=='openai' else {'status':'unchecked','detail':'Kiểm tra này dành cho endpoint tương thích OpenAI.'}
     try:
         from neo4j import GraphDatabase

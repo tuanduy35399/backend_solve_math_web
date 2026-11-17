@@ -30,7 +30,7 @@ with tempfile.TemporaryDirectory(prefix='mindgeo-qa-') as temp:
     )
     env={**os.environ,'DATABASE_PATH':str(Path(temp)/'qa.sqlite3'),'DJANGO_SECRET_KEY':secrets.token_urlsafe(40),'DJANGO_DEBUG':'true',
          'DJANGO_SETTINGS_MODULE':'qa_settings','PYTHONPATH':os.pathsep.join([temp,str(root),os.environ.get('PYTHONPATH','')]),
-         'DJANGO_ALLOWED_HOSTS':'127.0.0.1,localhost,testserver','QWEN_BASE_URL':'','QWEN_MODEL':'','QWEN_API_KEY':'','GEMINI_API_KEY':'','GEMINI_MODEL':'','OPENAI_API_KEY':'','TAVILY_API_KEY':'','RAG_ENABLED':'false',
+         'DJANGO_ALLOWED_HOSTS':'127.0.0.1,localhost,testserver','OPENAI_BASE_URL':'','OPENAI_MODEL':'','GEMINI_API_KEY':'','GEMINI_MODEL':'','OPENAI_API_KEY':'','TAVILY_API_KEY':'','RAG_ENABLED':'false',
          'TEST_USER_PASSWORD':secrets.token_urlsafe(18),'TEST_FRONTEND_URL':'http://127.0.0.1:5180',
          'DJANGO_TARGET':'http://127.0.0.1:18000','FASTAPI_TARGET':'http://127.0.0.1:18001','VITE_DEMO_MODE':'false'}
     env['TEST_GEOMETRY_CORPUS']='true' if with_corpus else 'false'

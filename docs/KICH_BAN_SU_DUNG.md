@@ -81,7 +81,7 @@ Team DuyPy · 09/11/2026
 
 **Mục tiêu:** học sinh đọc được nội dung đã cập nhật, giữ được nguồn đối chiếu.
 
-1. Kho học liệu → tìm bài → bấm Sửa.
+1. Kho học liệu → tìm bài trên toàn kho, chọn trang hoặc kết hợp bộ lọc xuất bản/duyệt → bấm biểu tượng bút chì. Trang tự cuộn đến trình sửa và tập trung vào tên học liệu.
 2. Kiểm tra lớp, phát biểu, công thức, ghi chú và nguồn.
 3. Sửa ghi chú, lưu và mở lại để xác nhận URL nguồn không bị mất.
 4. Đối chiếu nội dung rồi bấm dấu kiểm **Duyệt nội dung …**.

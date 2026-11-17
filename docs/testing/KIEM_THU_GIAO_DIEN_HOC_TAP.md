@@ -49,3 +49,16 @@ Các ca đăng nhập liên tiếp cùng dùng IP loopback nên đã chạm gi�
 - `npm run build`: đạt.
 - `scripts/verify_stack.py --corpus --grep 'free graph filters grades'`: 1/1 đạt, 12,9 giây; xác nhận không có nút, chọn lớp/bài, kéo ô, thu phóng, vừa khung và giao diện mobile.
 - Log: `data/remove-untangle-browser-tests.log`.
+
+## Bổ sung 10/11/2026: ngày giờ, tìm kiếm và hồ sơ theo vai trò
+
+- Ngày cập nhật học liệu dùng `DD/MM/YYYY · HH:mm`, theo múi giờ Việt Nam; giữ tương thích ngày demo dạng DD/MM/YYYY.
+- Chuyển vòng focus của tìm kiếm ra khung bao cả biểu tượng và ô nhập; không còn vòng viền riêng lệch bên trong.
+- Hồ sơ giáo viên/quản trị viên không hiện lớp đang học hoặc nút xuất/xóa dữ liệu học tập. Sidebar ghi đúng vai trò, không hiện badge kiến thức cần ôn; bảng quản trị chỉ hiện lớp cho học sinh. Lưu tên staff không gửi trường grade.
+- `npm test`: 36/36 đạt; gồm ngày ISO với microseconds, chuyển múi giờ qua ngày mới, ngày demo và ngày thiếu/sai.
+- `npm run build`: đạt.
+- Live E2E tập trung: 4/4 đạt trong 9,1 giây; học sinh đăng ký/lưu hồ sơ, ngày & focus tìm học liệu, giáo viên và quản trị viên lưu tên/tải lại, kiểm tra không tràn ngang mobile.
+- Các lượt E2E dùng DB và tài khoản QA tạm, không ghi dữ liệu thử vào DB làm việc, không gọi AI. Log: `data/role-date-ui-tests.log`.
+- Đã xem ảnh desktop: `docs/images/tim-kiem-ngay-cap-nhat.png`, `cai-dat-giao-vien.png`, `cai-dat-quan-tri.png`.
+
+Hồi quy demo tập trung: 2/2 đạt trong 4,9 giây (biên soạn học liệu/quan hệ và responsive các trang ở 390/320 px, gồm Cài đặt).
